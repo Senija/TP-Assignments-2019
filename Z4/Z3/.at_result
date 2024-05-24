@@ -1,0 +1,146 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Letovi::Letovi(std::initializer_list<Let>)’:\nmain.cpp:97:9: warning: ‘Letovi::ostvareni_letovi’ will be initialized after [-Wreorder]\n     int ostvareni_letovi;\n         ^~~~~~~~~~~~~~~~\nmain.cpp:96:9: warning:   ‘int Letovi::max_br_letova’ [-Wreorder]\n     int max_br_letova;\n         ^~~~~~~~~~~~~\nmain.cpp:107:5: warning:   when initialized here [-Wreorder]\n     Letovi(std::initializer_list<Let> lista_letova): ostvareni_letovi(lista_letova.size()), max_br_letova(lista_letova.size()), PokNaLet(new Let*[lista_letova.size()] {})\n     ^~~~~~\nmain.cpp: In constructor ‘Letovi::Letovi(Letovi&&)’:\nmain.cpp:98:11: warning: ‘Letovi::PokNaLet’ will be initialized after [-Wreorder]\n     Let **PokNaLet;\n           ^~~~~~~~\nmain.cpp:97:9: warning:   ‘int Letovi::ostvareni_letovi’ [-Wreorder]\n     int ostvareni_letovi;\n         ^~~~~~~~~~~~~~~~\nmain.cpp:143:1: warning:   when initialized here [-Wreorder]\n Letovi::Letovi(Letovi &&letovi) : PokNaLet(letovi.PokNaLet), ostvareni_letovi(letovi.ostvareni_letovi), max_br_letova(letovi.max_br_letova)  //za bezimene objekte\n ^~~~~~\nmain.cpp:97:9: warning: ‘Letovi::ostvareni_letovi’ will be initialized after [-Wreorder]\n     int ostvareni_letovi;\n         ^~~~~~~~~~~~~~~~\nmain.cpp:96:9: warning:   ‘int Letovi::max_br_letova’ [-Wreorder]\n     int max_br_letova;\n         ^~~~~~~~~~~~~\nmain.cpp:143:1: warning:   when initialized here [-Wreorder]\n Letovi::Letovi(Letovi &&letovi) : PokNaLet(letovi.PokNaLet), ostvareni_letovi(letovi.ostvareni_letovi), max_br_letova(letovi.max_br_letova)  //za bezimene objekte\n ^~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "97",
+                "col": "9",
+                "message": "'Letovi::ostvareni_letovi' will be initialized after",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:97:9: warning: ‘Letovi::ostvareni_letovi’ will be initialized after [-Wreorder]     int ostvareni_letovi;         ^~~~~~~~~~~~~~~~",
+                "code": "int ostvareni_letovi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "96",
+                "col": "9",
+                "message": "'int Letovi::max_br_letova'",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:96:9: warning:   ‘int Letovi::max_br_letova’ [-Wreorder]     int max_br_letova;         ^~~~~~~~~~~~~",
+                "code": "int max_br_letova;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "107",
+                "col": "5",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:107:5: warning:   when initialized here [-Wreorder]     Letovi(std::initializer_list<Let> lista_letova): ostvareni_letovi(lista_letova.size()), max_br_letova(lista_letova.size()), PokNaLet(new Let*[lista_letova.size()] {})     ^~~~~~/tmp/buildservice/bs_4860/main.cpp: In constructor ‘Letovi::Letovi(Letovi&&)’:",
+                "code": "Letovi(std::initializer_list<Let> lista_letova): ostvareni_letovi(lista_letova.size()), max_br_letova(lista_letova.size()), PokNaLet(new Let*[lista_letova.size()] {})"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "98",
+                "col": "11",
+                "message": "'Letovi::PokNaLet' will be initialized after",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:98:11: warning: ‘Letovi::PokNaLet’ will be initialized after [-Wreorder]     Let **PokNaLet;           ^~~~~~~~",
+                "code": "Let **PokNaLet;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "97",
+                "col": "9",
+                "message": "'int Letovi::ostvareni_letovi'",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:97:9: warning:   ‘int Letovi::ostvareni_letovi’ [-Wreorder]     int ostvareni_letovi;         ^~~~~~~~~~~~~~~~",
+                "code": "int ostvareni_letovi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "143",
+                "col": "1",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:143:1: warning:   when initialized here [-Wreorder] Letovi::Letovi(Letovi &&letovi) : PokNaLet(letovi.PokNaLet), ostvareni_letovi(letovi.ostvareni_letovi), max_br_letova(letovi.max_br_letova)  //za bezimene objekte ^~~~~~",
+                "code": "Letovi::Letovi(Letovi &&letovi) : PokNaLet(letovi.PokNaLet), ostvareni_letovi(letovi.ostvareni_letovi), max_br_letova(letovi.max_br_letova)  //za bezimene objekte"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "97",
+                "col": "9",
+                "message": "'Letovi::ostvareni_letovi' will be initialized after",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:97:9: warning: ‘Letovi::ostvareni_letovi’ will be initialized after [-Wreorder]     int ostvareni_letovi;         ^~~~~~~~~~~~~~~~",
+                "code": "int ostvareni_letovi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "96",
+                "col": "9",
+                "message": "'int Letovi::max_br_letova'",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:96:9: warning:   ‘int Letovi::max_br_letova’ [-Wreorder]     int max_br_letova;         ^~~~~~~~~~~~~",
+                "code": "int max_br_letova;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "143",
+                "col": "1",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_4860/main.cpp:143:1: warning:   when initialized here [-Wreorder] Letovi::Letovi(Letovi &&letovi) : PokNaLet(letovi.PokNaLet), ostvareni_letovi(letovi.ostvareni_letovi), max_br_letova(letovi.max_br_letova)  //za bezimene objekte ^~~~~~",
+                "code": "Letovi::Letovi(Letovi &&letovi) : PokNaLet(letovi.PokNaLet), ostvareni_letovi(letovi.ostvareni_letovi), max_br_letova(letovi.max_br_letova)  //za bezimene objekte"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "1, 15, 7, 55\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Oznaka    Odrediste              01:15   07:55     1\nOznaka    Odrediste Odrediste    01:25 (Planirano 01:15, Kasni 10 min)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Oznaka    Odrediste              11:50 (Planirano 10:10, Kasni 100 min)\nOznaka2   Odrediste2             12:12   16:22    20\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1590279028
+}

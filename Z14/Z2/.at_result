@@ -1,0 +1,170 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Sanduk::Sanduk(double, const char*, int, double)’:\nmain.cpp:25:12: warning: ‘Sanduk::tezina_predmeta’ will be initialized after [-Wreorder]\n     double tezina_predmeta;\n            ^~~~~~~~~~~~~~~\nmain.cpp:24:9: warning:   ‘int Sanduk::broj_predmeta’ [-Wreorder]\n     int broj_predmeta;\n         ^~~~~~~~~~~~~\nmain.cpp:27:5: warning:   when initialized here [-Wreorder]\n     Sanduk(double tezina, const char naziv_predmeta[], int broj_predmeta, double tezina_predmeta):tezina_sanduka(tezina), naziv_predmeta(naziv_predmeta), tezina_predmeta(tezina_predmeta), broj_predmeta(broj_predmeta) {}\n     ^~~~~~\nmain.cpp: In constructor ‘Skladiste::Skladiste(int)’:\nmain.cpp:83:9: warning: ‘Skladiste::kapacitet’ will be initialized after [-Wreorder]\n     int kapacitet;\n         ^~~~~~~~~\nmain.cpp:82:20: warning:   ‘PokNaSpremnik* Skladiste::DupliNaSpremnik’ [-Wreorder]\n     PokNaSpremnik *DupliNaSpremnik;\n                    ^~~~~~~~~~~~~~~\nmain.cpp:86:14: warning:   when initialized here [-Wreorder]\n     explicit Skladiste(int max_broj): kapacitet(max_broj), DupliNaSpremnik(new PokNaSpremnik[max_broj] {})\n              ^~~~~~~~~\nmain.cpp: In member function ‘void Skladiste::UcitajIzDatoteke(const char*)’:\nmain.cpp:195:21: warning: unused variable ‘znak’ [-Wunused-variable]\n         char slovo, znak;\n                     ^~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "25",
+                "col": "12",
+                "message": "'Sanduk::tezina_predmeta' will be initialized after",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:25:12: warning: ‘Sanduk::tezina_predmeta’ will be initialized after [-Wreorder]     double tezina_predmeta;            ^~~~~~~~~~~~~~~",
+                "code": "double tezina_predmeta;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "24",
+                "col": "9",
+                "message": "'int Sanduk::broj_predmeta'",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:24:9: warning:   ‘int Sanduk::broj_predmeta’ [-Wreorder]     int broj_predmeta;         ^~~~~~~~~~~~~",
+                "code": "int broj_predmeta;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "27",
+                "col": "5",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:27:5: warning:   when initialized here [-Wreorder]     Sanduk(double tezina, const char naziv_predmeta[], int broj_predmeta, double tezina_predmeta):tezina_sanduka(tezina), naziv_predmeta(naziv_predmeta), tezina_predmeta(tezina_predmeta), broj_predmeta(broj_predmeta) {}     ^~~~~~/tmp/buildservice/bs_5466/main.cpp: In constructor ‘Skladiste::Skladiste(int)’:",
+                "code": "Sanduk(double tezina, const char naziv_predmeta[], int broj_predmeta, double tezina_predmeta):tezina_sanduka(tezina), naziv_predmeta(naziv_predmeta), tezina_predmeta(tezina_predmeta), broj_predmeta(broj_predmeta) {}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "83",
+                "col": "9",
+                "message": "'Skladiste::kapacitet' will be initialized after",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:83:9: warning: ‘Skladiste::kapacitet’ will be initialized after [-Wreorder]     int kapacitet;         ^~~~~~~~~",
+                "code": "int kapacitet;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "82",
+                "col": "20",
+                "message": "'PokNaSpremnik* Skladiste::DupliNaSpremnik'",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:82:20: warning:   ‘PokNaSpremnik* Skladiste::DupliNaSpremnik’ [-Wreorder]     PokNaSpremnik *DupliNaSpremnik;                    ^~~~~~~~~~~~~~~",
+                "code": "PokNaSpremnik *DupliNaSpremnik;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "86",
+                "col": "14",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:86:14: warning:   when initialized here [-Wreorder]     explicit Skladiste(int max_broj): kapacitet(max_broj), DupliNaSpremnik(new PokNaSpremnik[max_broj] {})              ^~~~~~~~~/tmp/buildservice/bs_5466/main.cpp: In member function ‘void Skladiste::UcitajIzDatoteke(const char*)’:",
+                "code": "explicit Skladiste(int max_broj): kapacitet(max_broj), DupliNaSpremnik(new PokNaSpremnik[max_broj] {})"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "195",
+                "col": "21",
+                "message": "unused variable 'znak'",
+                "output": "/tmp/buildservice/bs_5466/main.cpp:195:21: warning: unused variable ‘znak’ [-Wunused-variable]         char slovo, znak;                     ^~~~",
+                "code": "char slovo, znak;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Vrsta spremnika: Sanduk\nSadrzaj: Nesto\nVlastita tezina: 1000 kg\nUkupna tezina: 1801 kg\nVrsta spremnika: Bure\nSadrzaj: Ulje neko\nVlastita tezina: 60.1 kg\nUkupna tezina: 110.1 kg\nVrsta spremnika: Sanduk\nSadrzaj: Tepsije\nVlastita tezina: 10 kg\nUkupna tezina: 25 kg\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Spremnik.Apstraktan: true\nSpremink.ImaVirtualniDestruktor: true\nb.Tezina: 10\nb.UkupnaTezina: 410\ns.Tezina: 25\ns.UkupnaTezina: 425\nGreska: Popunjeno skladiste\nBrojPreteskih (10): 7\nBrojPreteskih (50): 7\nBrojPreteskih (100): 3\nBrojPreteskih (500): 7\nNajlaksi.Tezina: 10\nNajlaksi.UkupnaTezina: 410\nNajtezi.Tezina: 21\nNajtezi.UkupnaTezina: 71\n-----------------------------------------\nVrsta spremnika: Bure\nSadrzaj: Nesto\nVlastita tezina: 11 kg\nUkupna tezina: 411 kg\nVrsta spremnika: Bure\nSadrzaj: Nesto\nVlastita tezina: 10 kg\nUkupna tezina: 411 kg\nVrsta spremnika: Bure\nSadrzaj: Nesto\nVlastita tezina: 10 kg\nUkupna tezina: 410 kg\nVrsta spremnika: Sanduk\nSadrzaj: Nehbitno\nVlastita tezina: 20 kg\nUkupna tezina: 83 kg\nVrsta spremnika: Sanduk\nSadrzaj: Nehbitno\nVlastita tezina: 20 kg\nUkupna tezina: 75 kg\nVrsta spremnika: Sanduk\nSadrzaj: Nehbitno\nVlastita tezina: 21 kg\nUkupna tezina: 71 kg\nVrsta spremnika: Sanduk\nSadrzaj: Nehbitno\nVlastita tezina: 20 kg\nUkupna tezina: 70 kg\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "s1:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns1:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns3:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Sanduk\nSadrzaj: Dodani sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 11 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns4:\n\nVrsta spremnika: Sanduk\nSadrzaj: Dodani sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 42 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns1:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns3:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Dodani sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns4:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns5:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\ns5:\n\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 3\nVlastita tezina: 3 kg\nUkupna tezina: 12 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 5\nVlastita tezina: 5 kg\nUkupna tezina: 10 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 4\nVlastita tezina: 4 kg\nUkupna tezina: 8 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 2\nVlastita tezina: 2 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 3\nVlastita tezina: 3 kg\nUkupna tezina: 6 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 2\nVlastita tezina: 2 kg\nUkupna tezina: 4 kg\nVrsta spremnika: Bure\nSadrzaj: Bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Sanduk\nSadrzaj: Sanduk 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\nVrsta spremnika: Bure\nSadrzaj: Dodano bure 1\nVlastita tezina: 1 kg\nUkupna tezina: 2 kg\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Vrsta spremnika: Sanduk\nSadrzaj: Burgije\nVlastita tezina: 80 kg\nUkupna tezina: 2579.5 kg\nVrsta spremnika: Sanduk\nSadrzaj: Nesto\nVlastita tezina: 1000 kg\nUkupna tezina: 1801 kg\nVrsta spremnika: Bure\nSadrzaj: Motorno ulje\nVlastita tezina: 50 kg\nUkupna tezina: 550 kg\nVrsta spremnika: Bure\nSadrzaj: Benzin\nVlastita tezina: 2 kg\nUkupna tezina: 32 kg\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "GRESKA: Trazena datoteka ne postoji\nGRESKA: Problemi pri citanju datoteke\nGRESKA: Datoteka sadrzi besmislene podatke",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "Vrsta spremnika: Sanduk\nSadrzaj: Burgije\nVlastita tezina: 80 kg\nUkupna tezina: 25075 kg\n---------------------\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1591885567
+}

@@ -1,0 +1,122 @@
+{
+    "id": 5722,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 3, Zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 1-----\"<<std::endl;\n\n    \/\/ AT 1: Testiranje konstruktora i metoda DajX i DajY klase Tacka\n    {\n        Tacka t(1,2);\n        std::cout<<t.DajX()<<\" \"<<t.DajY();\n    }\n\n    std::cout<<std::endl<<\"----- AT 2-----\"<<std::endl;\n\n    \/\/ AT 2: Testiranje konstruktora i metoda DajX i DajY klase Tacka\n    {\n        Tacka t(3,4);\n        std::cout<<t.DajX()<<\" \"<<t.DajY();\n    }\n\n    std::cout<<std::endl<<\"----- AT 3-----\"<<std::endl;\n\n    \/\/ AT 3: Testiranje metoda za postavljanje klase Tacka\n    {\n        Tacka t(1,2);\n        t.PostaviX(3);\n        t.PostaviY(4);\n\n        std::cout<<t.DajX()<<\" \"<<t.DajY();\n    }\n\n    std::cout<<std::endl<<\"----- AT 4-----\"<<std::endl;\n\n    \/\/ AT 4: Testiranje kaskadnog vezivanja metoda za postavljanje klase Tacka\n    {\n        Tacka t(1,2);\n        t.PostaviX(3).PostaviY(4);\n\n        std::cout<<t.DajX()<<\" \"<<t.DajY();\n    }\n\n    std::cout<<std::endl<<\"----- AT 5-----\"<<std::endl;\n\n    \/\/ AT 5: Testiranje metode Rastojanje klasse Tacka\n    {\n        Tacka t1(1,2);\n        Tacka t2(t1);\n        t2.PostaviX(-1).PostaviY(-2);\n\n        std::cout<<t1.Rastojanje(t1,t2);\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 1-----\\n1 2\\n----- AT 2-----\\n3 4\\n----- AT 3-----\\n3 4\\n----- AT 4-----\\n3 4\\n----- AT 5-----\\n4.47214"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 6-----\"<<std::endl;\n\n    \/\/ AT 6: Testiranje operatora << za ispis klase Tacka\n    {\n        Tacka t1(1,2);\n        std::cout<<t1;\n    }\n\n    std::cout<<std::endl<<\"----- AT 7-----\"<<std::endl;\n\n    \/\/ AT 7: Dodatan test metode za ispis preko operatora << klase Tacka\n    {\n        Tacka t1(1,2);\n        Tacka t2(3,4);\n\n        std::cout<<t1<<\" \"<<t2;\n    }\n\n    std::cout<<std::endl<<\"----- AT 8-----\"<<std::endl;\n\n    \/\/ AT 8: Testiranje da li su odgovarajuce metode inspektori klase Tacka\n    {\n        Tacka t1(-5,5);\n        const Tacka t2(t1);\n\n        std::cout<<\"Inspektori: \"<<t2.DajX()<<\" \"<<t2.DajY();\n    }\n\n    std::cout<<std::endl<<\"----- AT 9-----\"<<std::endl;\n\n    \/\/ AT 9: Test da li su elementi klase Tacka samo realni brojevi x i y\n    {\n        std::cout<<sizeof(Tacka);  \/\/ Mora biti 16!\n    }\n\n    std::cout<<std::endl<<\"----- AT 10-----\"<<std::endl;\n\n    \/\/ AT 10: Test da li su elementi klase Krug isti prema postavci\n    {\n        std::cout<<sizeof(Krug);  \/\/ Mora biti 24!\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 6-----\\n(1,2)\\n----- AT 7-----\\n(1,2) (3,4)\\n----- AT 8-----\\nInspektori: -5 5\\n----- AT 9-----\\n16\\n----- AT 10-----\\n24"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 11-----\"<<std::endl;\n\n    \/\/ AT 11: Testiranje prvog konstruktora i metode klase Krug - Tacka i r\n    {\n        Tacka t(1,2);\n        Krug k(t,3);\n\n        std::cout<<\"Konstruktor: \"<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik()<<std::endl;\n\n        t.PostaviX(3).PostaviY(4);\n        k.Postavi(t,5);\n\n        std::cout<<\"Metoda Postavi: \"<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik();\n    }\n\n    std::cout<<std::endl<<\"----- AT 12-----\"<<std::endl;\n    \n    \/\/ AT 12: Testiranje izuzetka prvog konstruktora i metode Postavi klase Krug - Tacka i r\n    {\n        Tacka t(1,2);\n        try\n        {\n            Krug k(t,-3);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what()<<std::endl;\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n\n        try\n        {\n            Krug k(t,3);  \/\/ Ispravno postavljanje\n            k.Postavi(t,-3);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 13-----\"<<std::endl;\n    \n    \/\/ AT 13: Testiranje drugog konstruktora klase Krug - x, y i r\n    {\n        Krug k(1,2,3);\n        std::cout<<\"Konstruktor: \"<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik()<<std::endl;\n\n        k.Postavi(3,4,5);\n        std::cout<<\"Metoda Postavi: \"<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik();\n    }\n\n    std::cout<<std::endl<<\"----- AT 14-----\"<<std::endl;\n    \n    \/\/ AT 14: Testiranje izuzetka drugog konstruktora i metode Postavi klase Krug - x, y i r\n    {\n        try\n        {\n            Krug k(1,2,-3);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what()<<std::endl;\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n\n        try\n        {\n            Krug k(1,2,3);  \/\/ Ispravno postavljanje\n            k.Postavi(1,2,-3);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 15-----\"<<std::endl;\n    \n    \/\/ AT 15: Testiranje treceg konstruktora i metode Postavi - dvije Tacke\n    {\n        Tacka t1(1,2);\n        Tacka t2(3,4);\n        Krug k(t1,t2);\n\n        \/\/ Za ovaj konstruktor je ispis preko operator <<, radi izjednacavanja tezine zadataka\n\n        std::cout<<\"Konstruktor: \"<<k<<std::endl;\n\n        t1.PostaviX(3).PostaviY(4);\n        t2.PostaviX(5).PostaviY(6);\n        k.Postavi(t1,t2);\n\n        \/\/ Za ovaj konstruktor je ispis preko operator <<, radi izjednacavanja tezine zadataka\n\n        std::cout<<\"Metoda Postavi: \"<<k;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 11-----\\nKonstruktor: 1 2 3\\nMetoda Postavi: 3 4 5\\n----- AT 12-----\\nNeispravan poluprecnik\\nNeispravan poluprecnik\\n----- AT 13-----\\nKonstruktor: 1 2 3\\nMetoda Postavi: 3 4 5\\n----- AT 14-----\\nNeispravan poluprecnik\\nNeispravan poluprecnik\\n----- AT 15-----\\nKonstruktor: {(1,2),2.82843}\\nMetoda Postavi: {(3,4),2.82843}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 16-----\"<<std::endl;\n    \n    \/\/ AT 16: Testiranje izuzetaka treceg konstruktora i metode Postavi - dvije Tacke (nema izuzetaka)\n    {\n        Tacka t1(1,2);\n        Tacka t2(0,1);\n        try\n        {\n            Krug k(t1,t2);\n            std::cout<<\"Nije bacen izuzetak - sto je OK!\"<<std::endl;\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what()<<std::endl;\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n\n        try\n        {\n            Krug k(t1,t2);\n            t1.PostaviX(0).PostaviY(1);\n            t2.PostaviX(0).PostaviY(1);\n            k.Postavi(t1,t2);\n            std::cout<<\"Nije bacen izuzetak - sto je OK!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 17-----\"<<std::endl;\n    \n    \/\/ AT 17: Test get-era\n    {\n        Tacka t(3,2);\n        Krug k(t,4);\n\n        Tacka ispis = k.DajCentar();\n        std::cout<<ispis.DajX()<<\" \"<<ispis.DajY()<<\" \"<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik();\n    }\n\n    std::cout<<std::endl<<\"----- AT 18-----\"<<std::endl;\n    \n    \/\/ AT 18: Test metoda DajObim i DajPovrsinu\n    {\n        Krug k(-2,-1,3);\n\n        std::cout<<k.DajObim()<<\" \"<<k.DajPovrsinu();\n    }\n\n    std::cout<<std::endl<<\"----- AT 19-----\"<<std::endl;\n    \n    \/\/ AT 19: Test operatora + i +=\n    {\n        Tacka t(3,3);\n        Krug k1(1,2,3);\n\n        \/\/ Operator + mora biti izveden kao obicna funkcija\n        Krug k = operator+(k1,t);\n\n        std::cout<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik()<<std::endl;\n\n        \/\/ Operator += mora biti izveden kao funkcija clanica\n        t.PostaviX(4).PostaviY(4);\n        k.operator+=(t);\n        std::cout<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik();\n    }\n\n    std::cout<<std::endl<<\"----- AT 20-----\"<<std::endl;\n    \n    \/\/ AT 20: Test operatora * i *= za verziju operatora krug * poluprecnik\n    {\n        Krug k1(1,2,3);\n\n        \/\/ Operator * mora biti izveden kao obicna funkcija\n        Krug k = operator*(k1,2);\n\n        std::cout<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik()<<std::endl;\n\n        \/\/ Operator *= mora biti izveden kao funkcija clanica\n        k.operator*=(2);\n        std::cout<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik()<<std::endl;\n\n        \/\/ Ispitivanje izuzetaka\n        try\n        {\n            k = operator*(k1,-2);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n\n        std::cout<<std::endl;\n        try\n        {\n            k.operator*=(-2);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 16-----\\nNije bacen izuzetak - sto je OK!\\nNije bacen izuzetak - sto je OK!\\n----- AT 17-----\\n3 2 3 2 4\\n----- AT 18-----\\n18.8496 28.2743\\n----- AT 19-----\\n4 5 3\\n8 9 3\\n----- AT 20-----\\n1 2 6\\n1 2 12\\nNeispravno skaliranje\\nNeispravno skaliranje"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 21-----\"<<std::endl;\n\n    \/\/ AT 21: Test operatora * i *= za verziju operatora poluprecnik * krug\n    {\n        \/\/ U slucaju verzije poluprecnik * krug, vrijedi samo operator*\n        Krug k1(1,2,3);\n\n        \/\/ Operator * mora biti izveden kao obicna funkcija\n        Krug k = operator*(2,k1);\n\n        std::cout<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik()<<std::endl;\n\n        \/\/ Ispitivanje izuzetaka\n        try\n        {\n            k = operator*(-2,k1);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 22-----\"<<std::endl;\n\n    \/\/ AT 22: Test operatora ++ (prefiks i postfiks), zajedno sa operatorom <<\n    {\n        Krug k(1,2,3);\n        \/\/ Operatori moraju biti izvedeni kao funkcije clanice\n\n        \/\/ Prefiksna verzija:\n        std::cout<<k<<\" \";\n        std::cout<<k.operator++()<<\" \";\n        std::cout<<k<<std::endl;\n\n        \/\/ Postfiksna verzija:\n        std::cout<<k<<\" \";\n        std::cout<<k.operator++(0)<<\" \";\n        std::cout<<k;\n    }\n\n    std::cout<<std::endl<<\"----- AT 23-----\"<<std::endl;\n\n    \/\/ AT 23: Test operatora <<\n    {\n        Krug k(1,2,3);\n\n        std::cout<<k;\n    }\n\n    std::cout<<std::endl<<\"----- AT 24-----\"<<std::endl;\n\n    \/\/ AT 24: Test da li sve metode koje bi trebale biti inspektori zapravo inspektori\n    {\n        Krug k1(1,2,3);\n        const Krug k(k1);\n        std::cout<<k.DajCentar()<<\" \"<<k.DajCentarX()<<\" \"<<k.DajCentarY()<<\" \"<<k.DajPoluprecnik();\n        std::cout<<\" \"<<k.DajObim()<<\" \"<<k.DajPovrsinu();\n    }\n\n    std::cout<<std::endl<<\"----- AT 25-----\"<<std::endl;\n\n    \/\/ AT 25: Test ispravnosti rada klasa i vecine operatora\n    {\n        Tacka t1(3, 5), t2(4, 2), t3(-5, 1);\n        std::cout << t1 << \" \" << t2.DajX() << \" \" << t2.DajY() << std::endl;\n        t2.PostaviX(0).PostaviY(-5);\n        std::cout << t2 << std::endl;\n        Krug k1(t1, 5), k2(3, 4, 2), k3(t1, t2);\n        std::cout << k1 << \" \" << k2 << \" \" << k3 << std::endl;\n        k1.Postavi(t2, 3);\n        k2.Postavi(4, 2, 1);\n        k3.Postavi(t3, t1);\n        std::cout << k1 << \" \" << t2 << \" \" << k3 << std::endl;\n        std::cout << k1.DajCentar() << \" \" << k1.DajPoluprecnik() << std::endl;\n        std::cout << k2.DajCentarX() << \" \" << k2.DajCentarY() << std::endl;\n        std::cout << k3.DajObim() << \" \" << k3.DajPovrsinu() << std::endl;\n        std::cout << k1 + t1 << \" \" << k1 * 3 << \" \" << 3 * k1 << std::endl;\n        k2 += t2;\n        std::cout << k2 << std::endl;\n        k3 *= 2;\n        std::cout << k3 << std::endl;\n        k2 = k1++;\n        k3 = ++k1;\n        std::cout << k1 << \" \" << k2 << \" \" << k3 << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 21-----\\n1 2 6\\nNeispravno skaliranje\\n----- AT 22-----\\n{(1,2),3} {(1,2),4} {(1,2),4}\\n{(1,2),4} {(1,2),4} {(1,2),5}\\n----- AT 23-----\\n{(1,2),3}\\n----- AT 24-----\\n(1,2) 1 2 3 18.8496 28.2743\\n----- AT 25-----\\n(3,5) 4 2\\n(0,-5)\\n{(3,5),5} {(3,4),2} {(3,5),10.4403}\\n{(0,-5),3} (0,-5) {(-5,1),8.94427}\\n(0,-5) 3\\n4 2\\n56.1985 251.327\\n{(3,0),3} {(0,-5),9} {(0,-5),9}\\n{(4,-3),1}\\n{(-5,1),17.8885}\\n{(0,-5),5} {(0,-5),3} {(0,-5),5}\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

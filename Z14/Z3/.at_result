@@ -1,0 +1,143 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Liga::Liga(int)’:\nmain.cpp:68:11: warning: ‘Liga::timovi’ will be initialized after [-Wreorder]\n     Tim **timovi;\n           ^~~~~~\nmain.cpp:66:15: warning:   ‘const int Liga::max_br_timova’ [-Wreorder]\n     const int max_br_timova ;\n               ^~~~~~~~~~~~~\nmain.cpp:92:14: warning:   when initialized here [-Wreorder]\n     explicit Liga(int velicina_lige) : timovi(new Tim *[velicina_lige] {}), max_br_timova(velicina_lige), broj_timova(0) {}\n              ^~~~\nmain.cpp: In member function ‘Tim* Liga::PokNaTim(const char*)’:\nmain.cpp:81:5: warning: control reaches end of non-void function [-Wreturn-type]\n     }\n     ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "68",
+                "col": "11",
+                "message": "'Liga::timovi' will be initialized after",
+                "output": "/tmp/buildservice/bs_7395/main.cpp:68:11: warning: ‘Liga::timovi’ will be initialized after [-Wreorder]     Tim **timovi;           ^~~~~~",
+                "code": "Tim **timovi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "66",
+                "col": "15",
+                "message": "'const int Liga::max_br_timova'",
+                "output": "/tmp/buildservice/bs_7395/main.cpp:66:15: warning:   ‘const int Liga::max_br_timova’ [-Wreorder]     const int max_br_timova ;               ^~~~~~~~~~~~~",
+                "code": "const int max_br_timova ;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "92",
+                "col": "14",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_7395/main.cpp:92:14: warning:   when initialized here [-Wreorder]     explicit Liga(int velicina_lige) : timovi(new Tim *[velicina_lige] {}), max_br_timova(velicina_lige), broj_timova(0) {}              ^~~~/tmp/buildservice/bs_7395/main.cpp: In member function ‘Tim* Liga::PokNaTim(const char*)’:",
+                "code": "explicit Liga(int velicina_lige) : timovi(new Tim *[velicina_lige] {}), max_br_timova(velicina_lige), broj_timova(0) {}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "81",
+                "col": "5",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_7395/main.cpp:81:5: warning: control reaches end of non-void function [-Wreturn-type]     }     ^",
+                "code": "}"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Tim1                   4   3   0   1  10   7   9\nTim3                   2   2   0   0   3   1   6\nTim4                   1   0   0   1   1   3   0\nTim2                   3   0   0   3   4   7   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "B                      5   2   1   2  11  10   7\nA                      3   2   0   1   5   4   6\nE                      1   1   0   0   4   3   3\nD                      2   0   1   1   3   4   1\nC                      1   0   0   1   1   3   0\n------------------------------------------------\nB                      5   2   1   2  11  10   7\nA                      3   2   0   1   5   4   6\nE                      1   1   0   0   4   3   3\nD                      2   0   1   1   3   4   1\nC                      1   0   0   1   1   3   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Datoteka ne postoji",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Problemi pri citanju datoteke",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Problemi pri citanju datoteke",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Datoteka ne postoji",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1591910743
+}

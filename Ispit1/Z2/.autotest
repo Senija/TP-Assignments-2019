@@ -1,0 +1,126 @@
+{
+    "id": 5689,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 1, Zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 33,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 2 64 -10 36 15 7 8\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Rezultujuci dek: 4 8 100 6 225 2.64575 64 ",
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Rezultujuci dek: 4 8 100 6 225 2.65 64 ",
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Rezultujuci dek: 4 8 100 6 225 2.64 64 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 34,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 2 64 -10 36 15 -7 8\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Problem: Element vektora negativan!\\n",
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Problem: Element vektora negativan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 35,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "        \/\/AT3 - prototip funkcije\n        std::vector<int> zadaniVektor1{1, 2, 3};\n        std::vector<long int> zadaniVektor2{1, 2, 3};\n        std::vector<long long int> zadaniVektor3{1, 2, 3};\n        std::deque <double> rezultujuciDek = IzdvojiElemente(zadaniVektor1);\n        rezultujuciDek = IzdvojiElemente(zadaniVektor2);\n        rezultujuciDek = IzdvojiElemente(zadaniVektor3);\n        std::cout << \"OK\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 36,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT4 \n    try {\n        std::vector<int> zadaniVektor{2, 64, -10, 36, 15, -7, 8};\n        std::deque <double> rezultujuciDek = IzdvojiElemente(zadaniVektor);\n        std::cout << \"Ovo se ne smije ispisati.\";\n    }\n    catch (std::logic_error e) {\n        std::cout << e.what() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Element vektora negativan!",
+                "Element vektora negativan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 37,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "        std::vector<int> zadaniVektor{};\n        std::deque <double> rezultujuciDek = IzdvojiElemente(zadaniVektor);\n        std::cout << zadaniVektor.size() << \" \" << rezultujuciDek.size();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

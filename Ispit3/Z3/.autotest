@@ -1,0 +1,60 @@
+{
+    "id": 5724,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 3, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 1 -----\"<<std::endl;\n    \n    \/\/ AT 1: Provjera da li je struktura ispravno definirana\n    {\n        std::cout<<sizeof(Cvor<int>);  \/\/ Mora ispisati 8\n\n        std::cout<<\" \"<<sizeof(Stek<int>);  \/\/ Mora ispisati 4\n    }\n\n    std::cout<<std::endl<<\"----- AT 2 -----\"<<std::endl;\n\n    \/\/ AT 2: Provjera bacanja izuzetka za top\n    {\n        Stek<int> s;\n        try\n        {\n            std::cout<<s.top();\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije tacan tip izuzetka!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 3 -----\"<<std::endl;\n    \n    \/\/ AT 3: Provjera bacanja izuzetka za pop\n    {\n        Stek<int> s;\n        try\n        {\n            s.pop();\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije tacan tip izuzetka!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 4 -----\"<<std::endl;\n    \n    \/\/ AT 4: Provjera da li su Cvor i Stek genericke strukture podataka\n    {\n        Stek<std::string> s;\n        s.push(\" TP :)\");\n        s.push(\" cu\");\n        s.push(\"Poloziti\");\n        while(!s.empty())\n        {\n            std::cout<<s.top();\n            s.pop();\n        }\n    }\n\n    std::cout<<std::endl<<\"----- AT 5 -----\"<<std::endl;\n    \n    \/\/ AT 5: Test ispravnog brisanja i unosa elemenata\n    {\n        Stek<int> s;\n        s.push(1);\n        s.push(2);\n        s.push(3);\n        s.pop();\n        s.pop();\n        s.push(9);\n        s.push(8);\n\n        while(!s.empty())\n        {\n            std::cout<<s.top()<<\" \";\n            s.pop();\n        }\n    }",
+            "global_above_main": "#include <string>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 1 -----\\n8 4\\n----- AT 2 -----\\nPrazan stek\\n----- AT 3 -----\\nPrazan stek\\n----- AT 4 -----\\nPoloziti cu TP :)\\n----- AT 5 -----\\n8 9 1",
+                "----- AT 1 -----\\n16 8\\n----- AT 2 -----\\nPrazan stek\\n----- AT 3 -----\\nPrazan stek\\n----- AT 4 -----\\nPoloziti cu TP :)\\n----- AT 5 -----\\n8 9 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 6 -----\"<<std::endl;\n\n    \/\/ AT 6: Provjera metode size\n    {\n        Stek<double> s;\n        s.push(1);\n        s.push(2);\n        s.push(3);\n        s.push(4);\n        std::cout<<s.size()<<\" \";\n        s.pop();\n        std::cout<<s.size()<<\" \";\n        s.push(4.3);\n        s.push(5.7);\n        s.push(2);\n        std::cout<<s.size();\n    }\n\n    std::cout<<std::endl<<\"----- AT 7 -----\"<<std::endl;\n\n    \/\/ AT 7: Test da li su sve potrebne metode inspektori\n    {\n        \/\/ OBJASNJENJE: Kreira se const objekt i testira se poziv metoda\n        \/\/ top ce baciti izuzetak ukoliko je prazan element, ali je metoda u redu, jer se kod mora kompajlirati\n        \/\/ AT pada u slucaju da se kod ne moze kompajlirati (nije odredjena metoda const)\n        \/\/ Metode koje moraju biti inspektor: top, size i empty\n\n        const Stek<int> s;  \/\/ Kreiramo konstantan objekt\n        try\n        {\n            s.top();\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<\"OK \";\n        }\n\n        std::cout<<s.size()<<\" \"<<std::boolalpha<<s.empty();\n    }\n\n    std::cout<<std::endl<<\"----- AT 8 -----\"<<std::endl;\n\n    \/\/ AT 8: Malo duza alokacija i dealokacija elemenata, te provjera broja elemenata\n    {\n        Stek<int> s;\n        for (int i {}; i<100; i++)\n            s.push(i);\n\n        for (int i {}; i<50; i++)\n            s.pop();\n\n        std::cout<<s.size()<<\" \";\n\n        for (int i {}; i<25; i++)\n            s.pop();\n\n        std::cout<<s.size()<<\" \";\n\n        for (int i {}; i<20; i++)\n            s.pop();\n\n        s.push(1);\n        std::cout<<s.size();\n    }\n\n    std::cout<<std::endl<<\"----- AT 9 -----\"<<std::endl;\n    \/\/ AT 9: Provjera da li je size = 0 i da li je empty = true ukoliko je Stek prazan\n    {\n        Stek<char> s;\n        std::cout<<s.size()<<\" \"<<std::boolalpha<<s.empty();\n    }\n\n    std::cout<<std::endl<<\"----- AT 10 -----\"<<std::endl;\n\n    \/\/ AT 10: Ispravan broj alokacija i dealokacija\n    {\n        brojac_new = 0;\n        brojac_deleteniz = 0;\n\n        \/\/ Tijelo za kreiranje, unos i brisanje elemenata preko destruktora\n        {\n            Stek<int> s;\n            s.push(1);\n            s.push(2);\n            s.push(3);  \/\/ 3 new\n            s.pop();  \/\/ 1 delete\n            for(int i {}; i<4; i++) \/\/ 4 new\n                s.push(i);\n        }\n        \/\/ Nakon izlaza iz tijela, poziva se destruktor koji brise sve, znaci 6\n        \/\/ Ukupno je 7 new, 7 delete, sto znaci ispravan destruktor i metode\n        std::cout << \"New pozvan \" << brojac_new << \" puta,  delete pozvan \" << brojac_deleteniz<< \" puta.\";\n\n    }",
+            "global_above_main": "#include <cstdlib>\n\n    static int brojac_new(0);\n    static int brojac_deleteniz(0);\n\n    void *operator new (size_t vel)\n    {\n    brojac_new++;\n    return std::malloc (vel);\n    }\n\n    void operator delete ( void* ptr) {\n    brojac_deleteniz++;\n    free(ptr);\n    }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 6 -----\\n4 3 6\\n----- AT 7 -----\\nOK 0 true\\n----- AT 8 -----\\n50 25 6\\n----- AT 9 -----\\n0 true\\n----- AT 10 -----\\nNew pozvan 7 puta,  delete pozvan 7 puta."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

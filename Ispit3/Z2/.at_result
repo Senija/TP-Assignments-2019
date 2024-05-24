@@ -1,0 +1,136 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘bool Gradovi::DaLiPostojiGrad(const char*) const’:\nmain.cpp:40:13: warning: unused variable ‘brojac’ [-Wunused-variable]\n         int brojac = -1;\n             ^~~~~~\nmain.cpp: In member function ‘int Gradovi::VratiPokNaGrad(const char*) const’:\nmain.cpp:52:5: warning: control reaches end of non-void function [-Wreturn-type]\n     }\n     ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "13",
+                "message": "unused variable 'brojac'",
+                "output": "/tmp/buildservice/bs_846/main.cpp:40:13: warning: unused variable ‘brojac’ [-Wunused-variable]         int brojac = -1;             ^~~~~~/tmp/buildservice/bs_846/main.cpp: In member function ‘int Gradovi::VratiPokNaGrad(const char*) const’:",
+                "code": "int brojac = -1;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "52",
+                "col": "5",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_846/main.cpp:52:5: warning: control reaches end of non-void function [-Wreturn-type]     }     ^",
+                "code": "}"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "31": {
+            "status": 1,
+            "run_result": {
+                "output": "AT1\nOK\nAT2\nNeispravni podaci\nNeispravni podaci\nAT3\nNeispravni podaci\nNeispravni podaci\nAT4\nTuzla Tuzla Tuzla\nAT5\n130000 130000 130000 130000 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "32": {
+            "status": 1,
+            "run_result": {
+                "output": "AT6\nOK\nAT7\n0 1 0 3 2AT8\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nBihac: 50000\nSarajevo: 350000\nAT10\nGrad vec postoji\nAT11\nTuzla: 130000\nAT19\n..AT16\nSarajevo: 350000\nBanja Luka: 200000\nTuzla: 130000\nZenica: 113000\nMostar: 100000\nBihac: 50000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "33": {
+            "status": 1,
+            "run_result": {
+                "output": "AT12\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nZenica: 113000\nAT13\nNepostojeci grad\nBihac: 50000\nTuzla: 130000\nNepostojeci grad\nAT15\nTuzla: 130001\nBihac: 50000\nSarajevo: 350001\nZenica: 113000\nMostar: 100001\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "34": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_34.cpp: In function ‘int main()’:\nbs_test_34.cpp:245:11: error: ‘class Gradovi’ has no member named ‘SacuvajUBinarnuDatoteku’\n         g.SacuvajUBinarnuDatoteku(\"AT14.DAT\");\n           ^~~~~~~~~~~~~~~~~~~~~~~\nbs_test_34.cpp:247:12: error: ‘class Gradovi’ has no member named ‘ObnoviIzBinarneDatoteke’\n         g2.ObnoviIzBinarneDatoteke(\"AT14.DAT\");\n            ^~~~~~~~~~~~~~~~~~~~~~~\nbs_test_34.cpp:259:14: error: ‘class Gradovi’ has no member named ‘ObnoviIzBinarneDatoteke’\n           g2.ObnoviIzBinarneDatoteke(\"AT15.DAT\");\n              ^~~~~~~~~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "11",
+                        "message": "'class Gradovi' has no member named 'SacuvajUBinarnuDatoteku'",
+                        "output": "/tmp/buildservice/bs_846/bs_test_34.cpp:245:11: error: ‘class Gradovi’ has no member named ‘SacuvajUBinarnuDatoteku’         g.SacuvajUBinarnuDatoteku(\"AT14.DAT\");           ^~~~~~~~~~~~~~~~~~~~~~~",
+                        "code": "g.SacuvajUBinarnuDatoteku(\"AT14.DAT\");"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 11,
+                        "col": "12",
+                        "message": "'class Gradovi' has no member named 'ObnoviIzBinarneDatoteke'",
+                        "output": "/tmp/buildservice/bs_846/bs_test_34.cpp:247:12: error: ‘class Gradovi’ has no member named ‘ObnoviIzBinarneDatoteke’         g2.ObnoviIzBinarneDatoteke(\"AT14.DAT\");            ^~~~~~~~~~~~~~~~~~~~~~~",
+                        "code": "g2.ObnoviIzBinarneDatoteke(\"AT14.DAT\");"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 23,
+                        "col": "14",
+                        "message": "'class Gradovi' has no member named 'ObnoviIzBinarneDatoteke'",
+                        "output": "/tmp/buildservice/bs_846/bs_test_34.cpp:259:14: error: ‘class Gradovi’ has no member named ‘ObnoviIzBinarneDatoteke’           g2.ObnoviIzBinarneDatoteke(\"AT15.DAT\");              ^~~~~~~~~~~~~~~~~~~~~~~",
+                        "code": "g2.ObnoviIzBinarneDatoteke(\"AT15.DAT\");"
+                    }
+                ]
+            }
+        },
+        "35": {
+            "status": 1,
+            "run_result": {
+                "output": "AT20\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nAT21\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nAT22\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nAT23\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\nTuzla: 130000\nBihac: 50000\nSarajevo: 350000\nMostar: 100000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1593423455
+}

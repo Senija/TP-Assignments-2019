@@ -1,0 +1,134 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘void Unos(std::vector<std::vector<std::vector<char> > >&, int)’:\nmain.cpp:259:114: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                         if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') ||*/ !(std::cin) || int(pomocna) != pomocna) {\n                                                                                                                  ^~~~~~~\nmain.cpp: In function ‘bool PogadjanjeRobota(std::vector<std::vector<std::vector<char> > >&, int)’:\nmain.cpp:374:102: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') || */!(std::cin) || int(pomocna) != pomocna) {\n                                                                                                      ^~~~~~~\nmain.cpp: In function ‘int main()’:\nmain.cpp:462:105: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n                 if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') ||*/ !(std::cin) || int(pomocna)!= pomocna) {\n                                                                                                         ^~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "259",
+                "col": "114",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_5765/main.cpp:259:114: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                         if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') ||*/ !(std::cin) || int(pomocna) != pomocna) {                                                                                                                  ^~~~~~~",
+                "code": "if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') ||*/ !(std::cin) || int(pomocna) != pomocna) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "374",
+                "col": "102",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_5765/main.cpp:374:102: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') || */!(std::cin) || int(pomocna) != pomocna) {                                                                                                      ^~~~~~~",
+                "code": "if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') || */!(std::cin) || int(pomocna) != pomocna) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "462",
+                "col": "105",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_5765/main.cpp:462:105: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]                 if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') ||*/ !(std::cin) || int(pomocna)!= pomocna) {                                                                                                         ^~~~~~~",
+                "code": "if(/*(std::cin.peek()!=' ' && std::cin.peek()!='\\n') ||*/ !(std::cin) || int(pomocna)!= pomocna) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Igra je pocela, unesite dimenzije matrica (dva broja):\nUnesite broj robota:\nNaida unesi pocetne i krajnje koordinate 1. robota:\nNaida unesi pocetne i krajnje koordinate 2. robota:\nAlina unesi pocetne i krajnje koordinate 1. robota:\nAlina unesi pocetne i krajnje koordinate 2. robota:\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\nNaida unesi koordinate koje zelis gadjati:\nUnisteno\nAlina unesi koordinate koje zelis gadjati:\nPogodak\nNaida unesi koordinate koje zelis gadjati:\nPogodak\nAlina unesi koordinate koje zelis gadjati:\nPromasaj\nNaida unesi koordinate koje zelis gadjati:\nUnisteno\nNaida je pobijedila. Naida ima 0 unistenih, 1 ostecenih i 1 citavih robota.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 4,
+            "run_result": {
+                "output": "Igra je pocela, unesite dimenzije matrica (dva broja):\n",
+                "duration": 10,
+                "status": 2
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Igra je pocela, unesite dimenzije matrica (dva broja):\nUnesite broj robota:\nNe mozete igrati bez robota\nUnesite broj robota:\nNaida unesi pocetne i krajnje koordinate 1. robota:\nNaida unesi pocetne i krajnje koordinate 2. robota:\nNaida unesi pocetne i krajnje koordinate 3. robota:\nNaida unesi pocetne i krajnje koordinate 4. robota:\nR - - - \nR R - - \nR R R - \n- - - - \nNaida unesi pocetne i krajnje koordinate 4. robota:\nAlina unesi pocetne i krajnje koordinate 1. robota:\nAlina unesi pocetne i krajnje koordinate 2. robota:\nAlina unesi pocetne i krajnje koordinate 3. robota:\nR - - - \n- R R - \n- - - - \n- - - - \nAlina unesi pocetne i krajnje koordinate 3. robota:\nNemoguce dovrsiti postavljanje robota\nNaida unesi pocetne i krajnje koordinate 1. robota:\nNaida unesi pocetne i krajnje koordinate 2. robota:\nNaida unesi pocetne i krajnje koordinate 3. robota:\nNaida unesi pocetne i krajnje koordinate 4. robota:\nAlina unesi pocetne i krajnje koordinate 1. robota:\nAlina unesi pocetne i krajnje koordinate 2. robota:\nAlina unesi pocetne i krajnje koordinate 3. robota:\nAlina unesi pocetne i krajnje koordinate 4. robota:\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\nNaida unesi koordinate koje zelis gadjati:\nNaida ima 0 unistenih, 0 ostecenih i 4 citavih robota.\nAlina ima 0 unistenih, 0 ostecenih i 4 citavih robota.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "7": {
+            "status": 1,
+            "run_result": {
+                "output": "Igra je pocela, unesite dimenzije matrica (dva broja):\nDimenzije matrica moraju biti pozitivne\nIgra je pocela, unesite dimenzije matrica (dva broja):\nMatrice moraju biti kvadratne\nIgra je pocela, unesite dimenzije matrica (dva broja):\nPrevelike dimenzije\nIgra je pocela, unesite dimenzije matrica (dva broja):\nUnesite broj robota:\nNe mozete igrati bez robota\nUnesite broj robota:\nZelite igrati sa previse robota\nUnesite broj robota:\nNaida unesi pocetne i krajnje koordinate 1. robota:\nPogresne koordinate gdje zelite smjestiti robota\nNaida unesi pocetne i krajnje koordinate 1. robota:\nPogresne koordinate gdje zelite smjestiti robota\nNaida unesi pocetne i krajnje koordinate 1. robota:\nPogresne koordinate gdje zelite smjestiti robota\nNaida unesi pocetne i krajnje koordinate 1. robota:\nPogresne koordinate gdje zelite smjestiti robota\nNaida unesi pocetne i krajnje koordinate 1. robota:\nNaida unesi pocetne i krajnje koordinate 2. robota:\nAlina unesi pocetne i krajnje koordinate 1. robota:\nAlina unesi pocetne i krajnje koordinate 2. robota:\nPogresne koordinate gdje zelite smjestiti robota\nAlina unesi pocetne i krajnje koordinate 2. robota:\nPogresne koordinate gdje zelite smjestiti robota\nAlina unesi pocetne i krajnje koordinate 2. robota:\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\nNaida unesi koordinate koje zelis gadjati:\nPogresne koordinate gdje zelite gadjati\nAlina unesi koordinate koje zelis gadjati:\nPogresne koordinate gdje zelite gadjati\nNaida unesi koordinate koje zelis gadjati:\nPogresne koordinate gdje zelite gadjati\nAlina unesi koordinate koje zelis gadjati:\nNaida ima 0 unistenih, 0 ostecenih i 2 citavih robota.\nAlina ima 0 unistenih, 0 ostecenih i 2 citavih robota.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "8": {
+            "status": 1,
+            "run_result": {
+                "output": "Igra je pocela, unesite dimenzije matrica (dva broja):\nUnesite broj robota:\nNaida unesi pocetne i krajnje koordinate 1. robota:\n- - - - - \n- - - - - \n- - - - - \n- - - - - \n- - - - - \nNaida unesi pocetne i krajnje koordinate 1. robota:\nNaida unesi pocetne i krajnje koordinate 2. robota:\nNaida unesi pocetne i krajnje koordinate 3. robota:\nR - - - - \n- - - - - \n- - - R - \n- - - R - \n- - - - - \nNaida unesi pocetne i krajnje koordinate 3. robota:\nNaida unesi pocetne i krajnje koordinate 4. robota:\nR - - - - \n- - R R R \n- - - R - \n- - - R - \n- - - - - \nNaida unesi pocetne i krajnje koordinate 4. robota:\nAlina unesi pocetne i krajnje koordinate 1. robota:\nAlina unesi pocetne i krajnje koordinate 2. robota:\nAlina unesi pocetne i krajnje koordinate 3. robota:\nAlina unesi pocetne i krajnje koordinate 4. robota:\nR R R - - \n- R R - - \n- - R - - \n- - - - - \n- - - - - \nAlina unesi pocetne i krajnje koordinate 4. robota:\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\nNaida unesi koordinate koje zelis gadjati:\nNaida ima 0 unistenih, 0 ostecenih i 4 citavih robota.\nAlina ima 0 unistenih, 0 ostecenih i 4 citavih robota.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "9": {
+            "status": 1,
+            "run_result": {
+                "output": "Igra je pocela, unesite dimenzije matrica (dva broja):\nUnesite broj robota:\nNaida unesi pocetne i krajnje koordinate 1. robota:\nNaida unesi pocetne i krajnje koordinate 2. robota:\nNaida unesi pocetne i krajnje koordinate 3. robota:\nAlina unesi pocetne i krajnje koordinate 1. robota:\nAlina unesi pocetne i krajnje koordinate 2. robota:\nAlina unesi pocetne i krajnje koordinate 3. robota:\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\nNaida unesi koordinate koje zelis gadjati:\n- - - - - \n- R - - - \nR R R - - \n- - - R - \n- - - R - \nNaida unesi koordinate koje zelis gadjati:\nPromasaj\nAlina unesi koordinate koje zelis gadjati:\nR - - - - \n- O - - - \n- - R - - \n- - R - R \n- - R - R \nAlina unesi koordinate koje zelis gadjati:\nPogodak\nNaida unesi koordinate koje zelis gadjati:\nUnisteno\nAlina unesi koordinate koje zelis gadjati:\nPogresne koordinate gdje zelite gadjati\nNaida unesi koordinate koje zelis gadjati:\nVec ste gadjali ovo polje\nAlina unesi koordinate koje zelis gadjati:\nPogodak\nNaida unesi koordinate koje zelis gadjati:\nPogodak\nAlina unesi koordinate koje zelis gadjati:\nX - - - - \n- O - - - \n- - R - - \n- - R - R \n- - R - X \nAlina unesi koordinate koje zelis gadjati:\nPromasaj\nNaida unesi koordinate koje zelis gadjati:\nUnisteno\nAlina unesi koordinate koje zelis gadjati:\nPogodak\nNaida unesi koordinate koje zelis gadjati:\nO - - - - \n- R - - - \nX R X - - \n- - - X - \n- - - R - \nNaida unesi koordinate koje zelis gadjati:\nPromasaj\nAlina unesi koordinate koje zelis gadjati:\nVec ste gadjali ovo polje\nNaida unesi koordinate koje zelis gadjati:\nVec ste gadjali ovo polje\nAlina unesi koordinate koje zelis gadjati:\nUnisteno\nNaida unesi koordinate koje zelis gadjati:\nPromasaj\nAlina unesi koordinate koje zelis gadjati:\nUnisteno\nNaida unesi koordinate koje zelis gadjati:\nO - - - - \n- X - - - \nX X X - - \n- - - X - \n- - - R - \nNaida unesi koordinate koje zelis gadjati:\nPromasaj\nAlina unesi koordinate koje zelis gadjati:\nX - - - - \n- O - - - \n- - R O - \n- - R - X \nO O R - X \nAlina unesi koordinate koje zelis gadjati:\nUnisteno\nAlina je pobijedila. Alina ima 2 unistenih, 0 ostecenih i 1 citavih robota.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1586792260
+}

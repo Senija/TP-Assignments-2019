@@ -1,0 +1,133 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘void NepreklapajuciPravougaonik::RotirajTacku(const Tacka&, Tacka&, Smjer)’:\nmain.cpp:30:22: warning: unused variable ‘PIpola’ [-Wunused-variable]\n         const double PIpola = (4 * atan(1))/2;\n                      ^~~~~~\nmain.cpp: In member function ‘bool NepreklapajuciPravougaonik::PostojiLiVec(const Tacka&, const Tacka&)’:\nmain.cpp:93:18: warning: unused variable ‘m’ [-Wunused-variable]\n             auto m = ImaLiPreklapanja(t1, t2, *i);\n                  ^\nmain.cpp: In function ‘bool DaLiSuSlicni(const NepreklapajuciPravougaonik&, const NepreklapajuciPravougaonik&)’:\nmain.cpp:346:89: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(p1.DajHorizontalnu()/p1.DajVertikalnu() == p2.DajHorizontalnu()/p2.DajVertikalnu()) return true; // U CIJELOM PROGRAMU FALI ROVJERA ZA TACKU I DUZ!!!\n                                                                                         ^\nmain.cpp: In function ‘int main()’:\nmain.cpp:383:5: warning: label ‘std’ defined but not used [-Wunused-label]\n     std:sort(VektorPok.begin(), VektorPok.end(), [](PokNaPravougaonik p1, PokNaPravougaonik p2){\n     ^~~\nmain.cpp: In member function ‘Tacka NepreklapajuciPravougaonik::DajSuprotnoTjeme(Pozicija) const’:\nmain.cpp:104:5: warning: control reaches end of non-void function [-Wreturn-type]\n     }\n     ^\nmain.cpp: In member function ‘void std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_M_dispose() [with _Tp = NepreklapajuciPravougaonik; _Alloc = std::allocator<NepreklapajuciPravougaonik>; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u]’:\nmain.cpp:130:33: warning: ‘sljedeci’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n             sljedeci->PokIspred = pomocna;\n             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~\nmain.cpp:117:37: note: ‘sljedeci’ was declared here\n         NepreklapajuciPravougaonik *sljedeci;\n                                     ^~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "30",
+                "col": "22",
+                "message": "unused variable 'PIpola'",
+                "output": "/tmp/buildservice/bs_7146/main.cpp:30:22: warning: unused variable ‘PIpola’ [-Wunused-variable]         const double PIpola = (4 * atan(1))/2;                      ^~~~~~/tmp/buildservice/bs_7146/main.cpp: In member function ‘bool NepreklapajuciPravougaonik::PostojiLiVec(const Tacka&, const Tacka&)’:",
+                "code": "const double PIpola = (4 * atan(1))/2;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "93",
+                "col": "18",
+                "message": "unused variable 'm'",
+                "output": "/tmp/buildservice/bs_7146/main.cpp:93:18: warning: unused variable ‘m’ [-Wunused-variable]             auto m = ImaLiPreklapanja(t1, t2, *i);                  ^",
+                "code": "auto m = ImaLiPreklapanja(t1, t2, *i);"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "346",
+                "col": "89",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7146/main.cpp:346:89: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(p1.DajHorizontalnu()/p1.DajVertikalnu() == p2.DajHorizontalnu()/p2.DajVertikalnu()) return true; // U CIJELOM PROGRAMU FALI ROVJERA ZA TACKU I DUZ!!!                                                                                         ^",
+                "code": "if(p1.DajHorizontalnu()/p1.DajVertikalnu() == p2.DajHorizontalnu()/p2.DajVertikalnu()) return true; // U CIJELOM PROGRAMU FALI ROVJERA ZA TACKU I DUZ!!!"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "383",
+                "col": "5",
+                "message": "label 'std' defined but not used",
+                "output": "/tmp/buildservice/bs_7146/main.cpp:383:5: warning: label ‘std’ defined but not used [-Wunused-label]     std:sort(VektorPok.begin(), VektorPok.end(), [](PokNaPravougaonik p1, PokNaPravougaonik p2){     ^~~/tmp/buildservice/bs_7146/main.cpp: In member function ‘Tacka NepreklapajuciPravougaonik::DajSuprotnoTjeme(Pozicija) const’:",
+                "code": "std:sort(VektorPok.begin(), VektorPok.end(), [](PokNaPravougaonik p1, PokNaPravougaonik p2){"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "104",
+                "col": "5",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_7146/main.cpp:104:5: warning: control reaches end of non-void function [-Wreturn-type]     }     ^/tmp/buildservice/bs_7146/main.cpp: In member function ‘void std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_M_dispose() [with _Tp = NepreklapajuciPravougaonik; _Alloc = std::allocator<NepreklapajuciPravougaonik>; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u]’:",
+                "code": "}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "130",
+                "col": "33",
+                "message": "'sljedeci' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_7146/main.cpp:130:33: warning: ‘sljedeci’ may be used uninitialized in this function [-Wmaybe-uninitialized]             sljedeci->PokIspred = pomocna;             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~",
+                "code": "sljedeci->PokIspred = pomocna;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Ispis pravougaonika nakon sortiranja: \n{{0,1},{1,0}}\n{{31,23},{51,17}}\nPodudarni pravougaonici: \nNema podudarnih pravougaonika.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: GRESKA: Nedozvoljeno preklapanje! Ponovite unos: \nUnesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: Unesite 1. tjeme pravougaonika 4: Unesite 2. tjeme pravougaonika 4: Ispis pravougaonika nakon sortiranja: \n{{0,1},{1,0}}\n{{2,4},{4,2}}\n{{5,7},{7,5}}\n{{23,17},{34,11}}\nPodudarni pravougaonici: \n{{2,4},{4,2}} i {{5,7},{7,5}}\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "OK 1\nOK 2\nOK 3\nOK 4\nOK 5\nNedozvoljeno preklapanje\nOK 6",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "OK 1\nOK 2\nOK 3\nOK 4\nOK 5",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1590229791
+}

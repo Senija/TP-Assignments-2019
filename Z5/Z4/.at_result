@@ -1,0 +1,92 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Vozilo*, std::vector<Vozilo> >; _Compare = __gnu_cxx::__ops::_Val_comp_iter<main()::<lambda(Vozilo, Vozilo)> >]’:\nmain.cpp:168:91: warning: ‘__val.Vozilo::polimorfnoVozilo’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n         if(V.polimorfnoVozilo != nullptr) polimorfnoVozilo = V.polimorfnoVozilo->DajKopiju();\n                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62:0,\n                 from main.cpp:5:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1822:2: note: ‘__val.Vozilo::polimorfnoVozilo’ was declared here\n  __val = _GLIBCXX_MOVE(*__last);\n  ^~~~~\nmain.cpp: In function ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Vozilo*, std::vector<Vozilo> >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<main()::<lambda(Vozilo, Vozilo)> >]’:\nmain.cpp:177:9: warning: ‘__value.Vozilo::polimorfnoVozilo’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n         if(V.polimorfnoVozilo != nullptr) {\n         ^~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:61:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62,\n                 from main.cpp:5:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h:334:15: note: ‘__value.Vozilo::polimorfnoVozilo’ was declared here\n    _ValueType __value = _GLIBCXX_MOVE(*(__first + __parent));\n               ^~~~~~~\nmain.cpp:177:9: warning: ‘__value.Vozilo::polimorfnoVozilo’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n         if(V.polimorfnoVozilo != nullptr) {\n         ^~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:61:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62,\n                 from main.cpp:5:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_heap.h:245:18: note: ‘__value.Vozilo::polimorfnoVozilo’ was declared here\n       _ValueType __value = _GLIBCXX_MOVE(*__result);\n                  ^~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "168",
+                "col": "91",
+                "message": "'__val.Vozilo::polimorfnoVozilo' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_7826/main.cpp:168:91: warning: ‘__val.Vozilo::polimorfnoVozilo’ may be used uninitialized in this function [-Wmaybe-uninitialized]         if(V.polimorfnoVozilo != nullptr) polimorfnoVozilo = V.polimorfnoVozilo->DajKopiju();                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~In file included from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62:0,                 from /tmp/buildservice/bs_7826/main.cpp:5:",
+                "code": "if(V.polimorfnoVozilo != nullptr) polimorfnoVozilo = V.polimorfnoVozilo->DajKopiju();"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "177",
+                "col": "9",
+                "message": "'__value.Vozilo::polimorfnoVozilo' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_7826/main.cpp:177:9: warning: ‘__value.Vozilo::polimorfnoVozilo’ may be used uninitialized in this function [-Wmaybe-uninitialized]         if(V.polimorfnoVozilo != nullptr) {         ^~In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:61:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62,                 from /tmp/buildservice/bs_7826/main.cpp:5:",
+                "code": "if(V.polimorfnoVozilo != nullptr) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "177",
+                "col": "9",
+                "message": "'__value.Vozilo::polimorfnoVozilo' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_7826/main.cpp:177:9: warning: ‘__value.Vozilo::polimorfnoVozilo’ may be used uninitialized in this function [-Wmaybe-uninitialized]         if(V.polimorfnoVozilo != nullptr) {         ^~In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:61:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/algorithm:62,                 from /tmp/buildservice/bs_7826/main.cpp:5:",
+                "code": "if(V.polimorfnoVozilo != nullptr) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "930",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "930",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "715\n1700\n5500\n715\n1700\n5500\n715\n1700\n5500\n715\n1700\n5500\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1592303918
+}

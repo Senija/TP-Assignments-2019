@@ -1,0 +1,76 @@
+{
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "time": 1593418687,
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 1-----\n1 2\n----- AT 2-----\n3 4\n----- AT 3-----\n3 4\n----- AT 4-----\n3 4\n----- AT 5-----\n4.47214",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 6-----\n(1,2)\n----- AT 7-----\n(1,2) (3,4)\n----- AT 8-----\nInspektori: -5 5\n----- AT 9-----\n16\n----- AT 10-----\n24",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 11-----\nKonstruktor: 1 2 3\nMetoda Postavi: 3 4 5\n----- AT 12-----\nNeispravan poluprecnik\nNeispravan poluprecnik\n----- AT 13-----\nKonstruktor: 1 2 3\nMetoda Postavi: 3 4 5\n----- AT 14-----\nNeispravan poluprecnik\nNeispravan poluprecnik\n----- AT 15-----\nKonstruktor: {(1,2),2.82843}\nMetoda Postavi: {(3,4),2.82843}",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 16-----\nNije bacen izuzetak - sto je OK!\nNije bacen izuzetak - sto je OK!\n----- AT 17-----\n3 2 3 2 4\n----- AT 18-----\n18.8496 28.2743\n----- AT 19-----\n4 5 3\n8 9 3\n----- AT 20-----\n1 2 6\n1 2 12\nNeispravno skaliranje\nNeispravno skaliranje",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "/tmp/cchklK0a.o: In function `main':\nbs_test_5.cpp:242: undefined reference to `operator*(double, Krug const&)'\nbs_test_5.cpp:249: undefined reference to `operator*(double, Krug const&)'\nbs_test_5.cpp:316: undefined reference to `operator*(double, Krug const&)'\ncollect2: error: ld returned 1 exit status"
+            }
+        }
+    },
+    "status": 4
+}

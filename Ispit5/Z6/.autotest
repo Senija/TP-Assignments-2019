@@ -1,0 +1,59 @@
+{
+    "id": 5744,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 5, Zadatak 6",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"------ AT 1 ------\"<<std::endl;\n    \/\/ AT 1: Trivijalni testovi (ispravnost parametara i povratnog tipa) - 1\n    {\n        \/\/ Kod se mora samo kompajlirati\n\n        std::vector<double> A;\n        std::vector<double> B;\n        double w;\n\n        auto f = FourierovRed(A,B,w);\n\n        if (false)\n            f(0);\n\n        std::cout<<\"OK\";\n    }\n\n    std::cout<<std::endl<<\"------ AT 2 ------\"<<std::endl;\n    \/\/ AT 2: Trivijalni testovi (ispravnost parametara i povratnog tipa) - 2\n    {\n        \/\/ Kod se mora samo kompajlirati - striktne varijable\n        const std::vector<double> A;\n        const std::vector<double> B;\n        const double w = 3;\n\n        auto f = FourierovRed(A,B,w);\n\n        if (false)\n            f(0);\n\n        std::cout<<\"OK\";\n    }\n\n    std::cout<<std::endl<<\"------ AT 3 ------\"<<std::endl;\n    \/\/ AT 3: Vektori A i B iste duzine - 1\n    {\n        std::vector<double> A {4,3,2};\n        std::vector<double> B {2,-1,0.3};\n        const double w = (4*std::atan(1)\/3);\n\n        auto f = FourierovRed(A,B,w);\n\n        std::cout<<f(2);\n    }\n\n    std::cout<<std::endl<<\"------ AT 4 ------\"<<std::endl;\n    \/\/ AT 4: Vektori A i B iste duzine - 1\n    {\n        std::vector<double> A {2,3,2};\n        std::vector<double> B {2,1.5,0.6};\n        const double w = (4*std::atan(1)\/3);\n\n        auto f = FourierovRed(A,B,w);\n\n        std::cout<<f(1.5);\n    }\n\n    std::cout<<std::endl<<\"------ AT 5 ------\"<<std::endl;\n    \/\/ AT 5: Slucajevi kad je jedan od vektora A ili B kra\u00e6i od drugog - 1\n    {\n        std::vector<double> A {8,7,5.5,4,2.75,2};\n        std::vector<double> B {2,1.5,0.6};\n        const double w = (4*std::atan(1)\/3);\n\n        auto f = FourierovRed(A,B,w);\n\n        std::cout<<f(3);\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "------ AT 1 ------\\nOK\\n------ AT 2 ------\\nOK\\n------ AT 3 ------\\n-1.62583\\n------ AT 4 ------\\n0.5\\n------ AT 5 ------\\n-0.75"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"------ AT 6 ------\"<<std::endl;\n    \/\/ AT 6: Slucajevi kad je jedan od vektora A ili B kra\u00e6i od drugog - 2\n    {\n        std::vector<double> A {3,2.75,2};\n        std::vector<double> B {7,6.5,4,2,1.5,0.6};\n        const double w = (4*std::atan(1)\/3);\n\n        auto f = FourierovRed(A,B,w);\n\n        std::cout<<f(0.2);\n    }\n\n    std::cout<<std::endl<<\"------ AT 7 ------\"<<std::endl;\n    \/\/ AT 7: Slucaj kada su A i B prazni\n    {\n\n        std::vector<double> A;\n        std::vector<double> B;\n        const double w = (4*std::atan(1)\/3);\n\n        auto f = FourierovRed(A,B,w);\n\n        std::cout<<f(2)<<\" \"<<f(-1.5);\n    }\n\n    std::cout<<std::endl<<\"------ AT 8 ------\"<<std::endl;\n    \/\/ AT 8: Test main programa - 1\n    {\n        _main();\n    }\n\n    std::cout<<std::endl<<\"------ AT 9 ------\"<<std::endl;\n    \/\/ AT 9: Test main programa - 2\n    {\n        _main();\n    }\n\n    std::cout<<std::endl<<\"------ AT 10 ------\"<<std::endl;\n    \/\/ AT 10: Test main programa - 3\n    {\n        _main();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0.7\n0.3\n-0.5"
+            },
+            "expected": [
+                "------ AT 6 ------\\n11.8053\\n------ AT 7 ------\\n0 0\\n------ AT 8 ------\\nUnesi x: T(x) = 2.41706\\n\\n------ AT 9 ------\\nUnesi x: T(x) = 2.19435\\n\\n------ AT 10 ------\\nUnesi x: T(x) = 1.98205"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

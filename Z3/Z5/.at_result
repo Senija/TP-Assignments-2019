@@ -1,0 +1,69 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int Poglavica(int, int, bool)’:\nmain.cpp:33:14: warning: unused variable ‘prvi_prolazak’ [-Wunused-variable]\n         bool prvi_prolazak = true;\n              ^~~~~~~~~~~~~\nmain.cpp:52:27: warning: ‘prethodni’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n                 delete pok;\n                           ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "33",
+                "col": "14",
+                "message": "unused variable 'prvi_prolazak'",
+                "output": "/tmp/buildservice/bs_8122/main.cpp:33:14: warning: unused variable ‘prvi_prolazak’ [-Wunused-variable]         bool prvi_prolazak = true;              ^~~~~~~~~~~~~",
+                "code": "bool prvi_prolazak = true;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "52",
+                "col": "27",
+                "message": "'prethodni' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_8122/main.cpp:52:27: warning: ‘prethodni’ may be used uninitialized in this function [-Wmaybe-uninitialized]                 delete pok;                           ^",
+                "code": "delete pok;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj punoljetnih clanova (N): Unesi korak razbrajanja (M): Unesi raspon (N1-N2): Redni broj osobe koja postaje poglavica: 4 Sigurno mjesto: 1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "7": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj punoljetnih clanova (N): Unesi korak razbrajanja (M): Unesi raspon (N1-N2): Redni broj osobe koja postaje poglavica: 4 Sigurno mjesto: 4",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1589043188
+}

@@ -1,0 +1,59 @@
+{
+    "id": 5741,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 5, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    std::cout << \"AT1 - testiranje parametra funkcije\" << std::endl;\n    std::string s{\"Oko ima kapak\"};\n    IzdvojiPalindromskeRijeci(s);\n    std::cout << \"OK\" << std::endl;\n  }\n  {\n    std::cout << \"AT2 - testiranje parametra funkcije\" << std::endl;\n    std::string s{\"Ana bere dud\"};\n    std::vector<std::string> v = IzdvojiPalindromskeRijeci(s);\n    std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    std::cout << \"AT3 - testiranje funkcije sa trivijalnim vrijednostima\" << std::endl;\n    std::string s{\"Grom udara u dud\"};\n    for(auto w : IzdvojiPalindromskeRijeci(s)) \n      std::cout << w << std::endl;\n  }\n  \n    \n  {\n    std::cout << \"AT4 - testiranje funkcije sa trivijalnim vrijednostima\" << std::endl;\n    std::string s{\"Wow Anna, did you just reach level 1000?\"};\n    for(auto w : IzdvojiPalindromskeRijeci(s)) \n      std::cout << w << std::endl;\n  }\n  \n  {\n    std::cout << \"AT5 - testiranje funkcije sa praznim stringom\" << std::endl;\n    std::vector<std::string> v = IzdvojiPalindromskeRijeci({});\n    std::cout << v.size() << std::endl;\n  }\n  \n  {\n    std::cout << \"AT6 - testiranje funkcije sa trivijalnim vrijednostima\" << std::endl;\n    std::string s{\"The longest palindromic word in the Oxford English Dictionary is the onomatopoeic..tattarrattat.\"};\n    for(auto w : IzdvojiPalindromskeRijeci(s)) \n      std::cout << w << std::endl;\n  }\n  \n  {\n    std::cout << \"AT7 - testiranje funkcije stringom od iskljucivo palindroma\" << std::endl;\n    for(auto w : IzdvojiPalindromskeRijeci({\"Level Madam Mom Noon  \"})) \n      std::cout << w << std::endl;\n  }\n  \n  {\n    std::cout << \"AT8 - testiranje funkcije stringom bez palindroma\" << std::endl;\n    std::vector<std::string> v = IzdvojiPalindromskeRijeci({\"U ovom stringu nema palindroma\"});\n    std::cout << v.size() << std::endl;\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT1 - testiranje parametra funkcije\\nOK\\nAT2 - testiranje parametra funkcije\\nOK\\nAT3 - testiranje funkcije sa trivijalnim vrijednostima\\ndud\\nAT4 - testiranje funkcije sa trivijalnim vrijednostima\\nWow\\nAnna\\ndid\\nlevel\\nAT5 - testiranje funkcije sa praznim stringom\\n0\\nAT6 - testiranje funkcije sa trivijalnim vrijednostima\\ntattarrattat\\nAT7 - testiranje funkcije stringom od iskljucivo palindroma\\nLevel\\nMadam\\nMom\\nNoon\\nAT8 - testiranje funkcije stringom bez palindroma\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    \/\/ULAZ Aziza, uberi taj mirisni neven i udji u kajak!\n    \/\/IZLAZ Aziza neven kajak\n    std::cout << \"AT9 - testiranje main funkcije\" << std::endl;\n    _main();\n  }\n  \n  {\n    \/\/ULAZ Aziza vesla kajak\n    \/\/IZLAZ Aziza kajak\n    std::cout << \"AT10 - testiranje main funkcije\" << std::endl;\n    _main();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Aziza, uberi taj mirisni neven i udji u kajak!\nAziza vesla kajak\n\n"
+            },
+            "expected": [
+                "AT9 - testiranje main funkcije\\nUnesite string: Aziza\\nneven\\nkajak\\nAT10 - testiranje main funkcije\\nUnesite string: Aziza\\nkajak"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

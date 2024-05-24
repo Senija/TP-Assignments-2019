@@ -1,0 +1,94 @@
+{
+    "id": 5449,
+    "name": "Tehnike programiranja (2017\/2018), ZSR 1, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT9 - testiranje funkcije KreirajSpil\n    std::list<std::pair<Boje, std::string>> spil (KreirajSpil());\n    std::cout << \"Velicina spila: \" << spil.size() << std::endl;\n    \n    auto it = spil.begin();\n    for (int i{0}; i < 4; i++)\n    {\n        if ((*it).first == Boje(i))\n            std::cout << getString((*it).first) << \": \";\n        while (it != spil.end() && (*it).first == Boje(i))\n        {\n            std::cout << (*it).second << \" \";\n            it++;\n        }\n        std::cout << std::endl;\n    }",
+            "global_above_main": "std::string getString(Boje b) \n{\n    switch (b) \n    {\n        case Boje::Herc: return \"Herc\";\n        case Boje::Karo: return \"Karo\";\n        case Boje::Pik: return \"Pik\";\n        case Boje::Tref: return \"Tref\";\n        default: return \"\";\n    }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Velicina spila: 52\\nPik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT10 - testiranje funkcije IzbaciKarteRazbrajanjem\n    std::list<std::pair<Boje, std::string>> spil (KreirajSpil());\n    std::cout << \"Velicina spila: \" << spil.size() << std::endl;\n    printMe(spil);\n    IzbaciKarteRazbrajanjem(spil, 2, 26);\n    std::cout << \"Velicina spila: \" << spil.size() << std::endl;\n    printMe(spil);\n    IzbaciKarteRazbrajanjem(spil, 2, 26);\n    std::cout << \"Velicina spila: \" << spil.size() << std::endl;",
+            "global_above_main": "std::string getString(Boje b) \n{\n    switch (b) \n    {\n        case Boje::Herc: return \"Herc\";\n        case Boje::Karo: return \"Karo\";\n        case Boje::Pik: return \"Pik\";\n        case Boje::Tref: return \"Tref\";\n        default: return \"\";\n    }\n}\n\nvoid printMe (const std::list<std::pair<Boje, std::string>>& spil)\n{\n    auto it = spil.begin();\n    for (int i{0}; i < 4; i++)\n    {\n        if ((*it).first == Boje(i))\n            std::cout << getString((*it).first) << \": \";\n        while (it != spil.end() && (*it).first == Boje(i))\n        {\n            std::cout << (*it).second << \" \";\n            it++;\n        }\n        std::cout << std::endl;\n    }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Velicina spila: 52\\nPik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\nVelicina spila: 26\\nPik: 2 4 6 8 10 Q A \\nTref: 3 5 7 9 J K \\nHerc: 2 4 6 8 10 Q A \\nKaro: 3 5 7 9 J K \\nVelicina spila: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT11 - testiranje funkcije IzbaciKarteRazbrajanjem\n    std::list<std::pair<Boje, std::string>> spil (KreirajSpil());\n    std::cout << \"Velicina spila: \" << spil.size();\n    printMe(spil);\n    IzbaciKarteRazbrajanjem(spil, 1, 13);\n    std::cout << \"Velicina spila: \" << spil.size();\n    printMe(spil);\n    IzbaciKarteRazbrajanjem(spil, 1, 13);\n    std::cout << \"Velicina spila: \" << spil.size();\n    printMe(spil);\n    IzbaciKarteRazbrajanjem(spil, 1, 13);\n    std::cout << \"Velicina spila: \" << spil.size();\n    printMe(spil);\n    IzbaciKarteRazbrajanjem(spil, 1, 13);\n    std::cout << \"Velicina spila: \" << spil.size();",
+            "global_above_main": "std::string getString(Boje b) \n{\n    switch (b) \n    {\n        case Boje::Herc: return \"Herc\";\n        case Boje::Karo: return \"Karo\";\n        case Boje::Pik: return \"Pik\";\n        case Boje::Tref: return \"Tref\";\n        default: return \"\";\n    }\n}\n\nvoid printMe (const std::list<std::pair<Boje, std::string>>& spil)\n{\n    auto it = spil.begin();\n    for (int i{0}; i < 4; i++)\n    {     \n        if ((*it).first == Boje(i))\n          std::cout << std::endl << getString((*it).first) << \": \";\n        while (it != spil.end() && (*it).first == Boje(i))\n        {\n            std::cout << (*it).second << \" \";\n            it++;\n        }\n    }\n    std::cout << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Velicina spila: 52\\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\nVelicina spila: 39\\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\nVelicina spila: 26\\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\nVelicina spila: 13\\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\nVelicina spila: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

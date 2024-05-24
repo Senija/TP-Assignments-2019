@@ -1,0 +1,120 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Narudzba::Narudzba(const char*, double, const char*)’:\nmain.cpp:13:12: warning: ‘Narudzba::cijena’ will be initialized after [-Wreorder]\n     double cijena;\n            ^~~~~~\nmain.cpp:12:17: warning:   ‘std::__cxx11::string Narudzba::ime_prezime’ [-Wreorder]\n     std::string ime_prezime;\n                 ^~~~~~~~~~~\nmain.cpp:16:5: warning:   when initialized here [-Wreorder]\n     Narudzba(const char *naziv_jela, double cijena, const char *ime_prezime):naziv_obroka(naziv_jela), cijena(cijena), ime_prezime(ime_prezime)\n     ^~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "13",
+                "col": "12",
+                "message": "'Narudzba::cijena' will be initialized after",
+                "output": "/tmp/buildservice/bs_7000/main.cpp:13:12: warning: ‘Narudzba::cijena’ will be initialized after [-Wreorder]     double cijena;            ^~~~~~",
+                "code": "double cijena;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "12",
+                "col": "17",
+                "message": "'std::__cxx11::string Narudzba::ime_prezime'",
+                "output": "/tmp/buildservice/bs_7000/main.cpp:12:17: warning:   ‘std::__cxx11::string Narudzba::ime_prezime’ [-Wreorder]     std::string ime_prezime;                 ^~~~~~~~~~~",
+                "code": "std::string ime_prezime;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "16",
+                "col": "5",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_7000/main.cpp:16:5: warning:   when initialized here [-Wreorder]     Narudzba(const char *naziv_jela, double cijena, const char *ime_prezime):naziv_obroka(naziv_jela), cijena(cijena), ime_prezime(ime_prezime)     ^~~~~~~~",
+                "code": "Narudzba(const char *naziv_jela, double cijena, const char *ime_prezime):naziv_obroka(naziv_jela), cijena(cijena), ime_prezime(ime_prezime)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Ivona Ivkovic: Janjetina, 12.5KM.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Obrok: Janjetina\nCijena: 12.5 KM\nNarucilac: Ivona Ivkovic\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Obrok: Janjetina\nPice: brusnica\nCijena: 12.5 KM\nCijena pica: 2 KM\nUkupna cijena: 14.5 KM\nNarucilac: Ivona Ivkovic\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Obrok: Teletina\nCijena: 10 KM\nNarucilac: Ivona Ivkovic\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1592240070
+}

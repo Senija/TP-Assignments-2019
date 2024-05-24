@@ -1,0 +1,78 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘void Pravougaonik::RotirajTacku(const Tacka&, Tacka&, Smjer)’:\nmain.cpp:25:22: warning: unused variable ‘PIpola’ [-Wunused-variable]\n         const double PIpola = (4 * atan(1))/2;\n                      ^~~~~~\nmain.cpp: In function ‘bool DaLiSuSlicni(const Pravougaonik&, const Pravougaonik&)’:\nmain.cpp:258:89: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(p1.DajHorizontalnu()/p1.DajVertikalnu() == p2.DajHorizontalnu()/p2.DajVertikalnu()) return true; // U CIJELOM PROGRAMU FALI ROVJERA ZA TACKU I DUZ!!!\n                                                                                         ^\nmain.cpp: In member function ‘Tacka Pravougaonik::DajTjeme(Pozicija) const’:\nmain.cpp:67:5: warning: control reaches end of non-void function [-Wreturn-type]\n     }\n     ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "25",
+                "col": "22",
+                "message": "unused variable 'PIpola'",
+                "output": "/tmp/buildservice/bs_8213/main.cpp:25:22: warning: unused variable ‘PIpola’ [-Wunused-variable]         const double PIpola = (4 * atan(1))/2;                      ^~~~~~",
+                "code": "const double PIpola = (4 * atan(1))/2;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "258",
+                "col": "89",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_8213/main.cpp:258:89: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(p1.DajHorizontalnu()/p1.DajVertikalnu() == p2.DajHorizontalnu()/p2.DajVertikalnu()) return true; // U CIJELOM PROGRAMU FALI ROVJERA ZA TACKU I DUZ!!!                                                                                         ^/tmp/buildservice/bs_8213/main.cpp: In member function ‘Tacka Pravougaonik::DajTjeme(Pozicija) const’:",
+                "code": "if(p1.DajHorizontalnu()/p1.DajVertikalnu() == p2.DajHorizontalnu()/p2.DajVertikalnu()) return true; // U CIJELOM PROGRAMU FALI ROVJERA ZA TACKU I DUZ!!!"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "67",
+                "col": "5",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_8213/main.cpp:67:5: warning: control reaches end of non-void function [-Wreturn-type]     }     ^",
+                "code": "}"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: Unesite 1. tjeme pravougaonika 4: Unesite 2. tjeme pravougaonika 4: Unesite podatke za transliranje (dx dy): Pravougaonici, nakon transformacija:\n{{-1.5,5.5},{8.5,0.5}}\n{{3,2},{5,-2}}\n{{1,2},{5,0}}\n{{6,5},{8,3}}\nPravougaonik s najvecom povrsinom: {{-1.5,5.5},{8.5,0.5}}",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "{{0,5},{5,0}}\n{{-5,5},{5,-5}}\nCentar: (0, 0)\n{{-5,5},{10,0}}\n{{-5,10},{0,-5}}\n{{-5,5},{0,0}}\n\n{{7,5},{13,1}}\n{{1,5},{7,1}}\n{{7,5},{7,1}}\nW: 0, H: 4",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1590079140
+}

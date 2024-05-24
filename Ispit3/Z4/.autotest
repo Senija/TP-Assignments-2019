@@ -1,0 +1,101 @@
+{
+    "id": 5725,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 3, Zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 35,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT1 - testiranje konstruktora klase Lopta\n    {\n        std::cout << \"AT1\" << std::endl;\n        Predmet **predmeti = new Predmet*[3];\n        predmeti[0] = new Lopta(1, 1);\n        predmeti[1] = new Lopta(2, 2);\n        predmeti[2] = new Lopta(3, 3);\n        delete predmeti[0];\n        delete predmeti[1];\n        delete predmeti[2];\n        delete[] predmeti;\n        std::cout << \"OK\" << std::endl;\n    }\n    \/\/AT2 - testiranje konstruktora klase Cigla\n    {\n        std::cout << \"AT2\" << std::endl;\n        Predmet **predmeti = new Predmet*[2];\n        predmeti[0] = new Cigla(1, 5, 5, 5);\n        predmeti[1] = new Cigla(2, 7, 7, 7);\n        delete predmeti[0];\n        delete predmeti[1];\n        delete[] predmeti;\n        std::cout << \"OK\" << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT1\\nOK\\nAT2\\nOK\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 36,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT3 - testiranje metode DajGustinu() klase Lopta\n    {\n        std::cout << \"AT3\" << std::endl;\n        Cigla c1(1, 2, 2, 2);\n        Cigla c2(3, 4, 4, 4);\n        Cigla c3(5, 6, 6, 6);\n        double g1(c1.DajGustinu()), g2(c2.DajGustinu()), g3(c3.DajGustinu());\n        std::cout << g1 << \" \" << g2 << \" \" << g3 << std::endl;\n    }\n    \/\/AT4 - testiranje metode DajZapreminu() klase Lopta\n    {\n        std::cout << \"AT4\" << std::endl;\n        Cigla c1(1, 2, 2, 2);\n        Cigla c2(3, 4, 4, 4);\n        Cigla c3(5, 6, 6, 6);\n        double z1(c1.DajZapreminu()), z2(c2.DajZapreminu()), z3(c3.DajZapreminu());\n        std::cout << std::setprecision(4) << z1 << \" \" << z2 << \" \" << z3 << std::endl;\n    }\n    \/\/AT5 - testiranje metode DajMasu() klase Lopta\n    {\n        std::cout << \"AT5\" << std::endl;\n        Cigla c1(1, 2, 2, 2);\n        Cigla c2(3, 4, 4, 4);\n        Cigla c3(5, 6, 6, 6);\n        double m1(c1.DajMasu()), m2(c2.DajMasu()), m3(c3.DajMasu());\n        std::cout << std::setprecision(4) << m1 << \" \" << m2 << \" \" << m3 << std::endl;\n    }",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT3\\n1 3 5\\nAT4\\n8 64 216\\nAT5\\n8 192 1080"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 37,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT6 - testiranje metode DajGustinu() klase Cigla\n    {\n        std::cout << \"AT6\" << std::endl;\n        Lopta l1(1, 1);\n        Lopta l2(2, 2);\n        Lopta l3(3, 3);\n        double g1(l1.DajGustinu()), g2(l2.DajGustinu()), g3(l3.DajGustinu());\n        std::cout << g1 << \" \" << g2 << \" \" << g3 << std::endl;\n    }\n    \/\/AT7 - testiranje metode DajZapreminu() klase Cigla\n    {\n        std::cout << \"AT7\" << std::endl;\n        Lopta l1(1, 1);\n        Lopta l2(2, 2);\n        Lopta l3(3, 3);\n        double z1(l1.DajZapreminu()), z2(l2.DajZapreminu()), z3(l3.DajZapreminu());\n        std::cout << std::setprecision(4) << z1 << \" \" << z2 << \" \" << z3 << std::endl;\n    }\n    \/\/AT8 - testiranje metode DajMasu() klase Cigla\n    {\n        std::cout << \"AT8\" << std::endl;\n        Lopta l1(1, 1);\n        Lopta l2(2, 2);\n        Lopta l3(3, 3);\n        double m1(l1.DajMasu()), m2(l2.DajMasu()), m3(l3.DajMasu());\n        std::cout << std::setprecision(4) << m1 << \" \" << m2 << \" \" << m3 << std::endl;\n    }",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT6\\n1 2 3\\nAT7\\n4.189 33.51 113.1\\nAT8\\n4.189 67.02 339.3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 38,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT9 - test studentskog maina\n    {\n        std::cout << \"AT9\" << std::endl;\n        _main();\n        std::cout << std::endl;\n    }\n\n    \/\/AT10 - test studentskog maina\n    {\n        std::cout << \"AT10\" << std::endl;\n        _main();\n        std::cout << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 L 1 1 L 2 2 C 1 5 5 7\n4 C 1 2 2 2 C 3 4 4 4 L 4 5 L 5 6\n\n"
+            },
+            "expected": [
+                "AT9\\nUnesite broj predmeta: Unesite vrstu 1. predmeta (L ili C): Unesite gustinu i radijus lopte: Unesite vrstu 2. predmeta (L ili C): Unesite gustinu i radijus lopte: Unesite vrstu 3. predmeta (L ili C): Unesite gustinu i dimenzije cigle (duzina, sirina, visina): 175\\n67.0206\\n4.18879\\n\\nAT10\\nUnesite broj predmeta: Unesite vrstu 1. predmeta (L ili C): Unesite gustinu i dimenzije cigle (duzina, sirina, visina): Unesite vrstu 2. predmeta (L ili C): Unesite gustinu i dimenzije cigle (duzina, sirina, visina): Unesite vrstu 3. predmeta (L ili C): Unesite gustinu i radijus lopte: Unesite vrstu 4. predmeta (L ili C): Unesite gustinu i radijus lopte: 4523.89\\n2094.4\\n192\\n8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

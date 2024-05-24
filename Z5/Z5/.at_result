@@ -1,0 +1,175 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’:\nmain.cpp:547:29:   required from here\nmain.cpp:25:7: warning: ‘Matrica<int>::ime_matrice’ will be initialized after [-Wreorder]\n  char ime_matrice;\n       ^~~~~~~~~~~\nmain.cpp:24:21: warning:   ‘int** Matrica<int>::elementi’ [-Wreorder]\n  TipEl **elementi = nullptr;\n                     ^~~~~~~\nmain.cpp:156:1: warning:   when initialized here [-Wreorder]\n Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n ^~~~~~~~~~~~~~\nmain.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’:\nmain.cpp:564:32:   required from here\nmain.cpp:25:7: warning: ‘Matrica<double>::ime_matrice’ will be initialized after [-Wreorder]\n  char ime_matrice;\n       ^~~~~~~~~~~\nmain.cpp:24:21: warning:   ‘double** Matrica<double>::elementi’ [-Wreorder]\n  TipEl **elementi = nullptr;\n                     ^~~~~~~\nmain.cpp:156:1: warning:   when initialized here [-Wreorder]\n Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n ^~~~~~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "25",
+                "col": "7",
+                "message": "'Matrica<int>::ime_matrice' will be initialized after",
+                "output": "/tmp/buildservice/bs_3579/main.cpp:25:7: warning: ‘Matrica<int>::ime_matrice’ will be initialized after [-Wreorder]  char ime_matrice;       ^~~~~~~~~~~",
+                "code": "char ime_matrice;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "24",
+                "col": "21",
+                "message": "'int** Matrica<int>::elementi'",
+                "output": "/tmp/buildservice/bs_3579/main.cpp:24:21: warning:   ‘int** Matrica<int>::elementi’ [-Wreorder]  TipEl **elementi = nullptr;                     ^~~~~~~",
+                "code": "TipEl **elementi = nullptr;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "156",
+                "col": "1",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_3579/main.cpp:156:1: warning:   when initialized here [-Wreorder] Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) : ^~~~~~~~~~~~~~/tmp/buildservice/bs_3579/main.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’:/tmp/buildservice/bs_3579/main.cpp:564:32:   required from here",
+                "code": "Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "25",
+                "col": "7",
+                "message": "'Matrica<double>::ime_matrice' will be initialized after",
+                "output": "/tmp/buildservice/bs_3579/main.cpp:25:7: warning: ‘Matrica<double>::ime_matrice’ will be initialized after [-Wreorder]  char ime_matrice;       ^~~~~~~~~~~",
+                "code": "char ime_matrice;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "24",
+                "col": "21",
+                "message": "'double** Matrica<double>::elementi'",
+                "output": "/tmp/buildservice/bs_3579/main.cpp:24:21: warning:   ‘double** Matrica<double>::elementi’ [-Wreorder]  TipEl **elementi = nullptr;                     ^~~~~~~",
+                "code": "TipEl **elementi = nullptr;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "156",
+                "col": "1",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_3579/main.cpp:156:1: warning:   when initialized here [-Wreorder] Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) : ^~~~~~~~~~~~~~",
+                "code": "Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "8": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Trazena datoteka ne postoji\nIzuzetak: Trazena datoteka ne postoji\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "9": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Trazena datoteka ne postoji\nIzuzetak: Trazena datoteka ne postoji\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "10": {
+            "status": 1,
+            "run_result": {
+                "output": "     1     2\n     3     4\n\n\n   1.4  2.54\n   3.7  -4.7\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "11": {
+            "status": 1,
+            "run_result": {
+                "output": "     0     1\n     1     2\n\n\n   0.5   1.5\n   1.5   2.5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "12": {
+            "status": 1,
+            "run_result": {
+                "output": "     0     1\n     1     2\nIzuzetak: Trazena datoteka ne postoji\n\n\n   0.5   1.5\n   1.5   2.5\nIzuzetak: Trazena datoteka ne postoji\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "13": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Datoteka sadrzi besmislene podatke\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "14": {
+            "status": 1,
+            "run_result": {
+                "output": "     1     2\n     3     4\nIzuzetak: Datoteka sadrzi besmislene podatke\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1592598955
+}

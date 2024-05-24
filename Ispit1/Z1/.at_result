@@ -1,0 +1,102 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘std::__cxx11::list<bool> TransformirajMatricu(std::vector<std::vector<double> >&)’:\nmain.cpp:37:26: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(int (suma) == suma) {\n                          ^~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "37",
+                "col": "26",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_157/main.cpp:37:26: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(int (suma) == suma) {                          ^~~~",
+                "code": "if(int (suma) == suma) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "19": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj redova: Unesite broj kolona: Unesite elemente matrice: Transformirana matrica:9 8 7 \n5.5 3.4 5.5 \n4 5 6 \n1.5 2.5 3.5 \n1 2 3 \nRezultujuca lista: true false true ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "20": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj redova: Unesite broj kolona: Unesite elemente matrice: Transformirana matrica:3 1.2 \n1 2.3 \nRezultujuca lista: true false ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "21": {
+            "status": 1,
+            "run_result": {
+                "output": "9 8 7 \n5.5 3.4 5.5 \n4 5 6 \n1.5 2.5 3.5 \n1 2 3 \n1 0 1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "22": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Parametar nema formu matrice",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "23": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1594576291
+}

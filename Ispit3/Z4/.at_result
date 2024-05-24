@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "35": {
+            "status": 1,
+            "run_result": {
+                "output": "AT1\nOK\nAT2\nOK\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "36": {
+            "status": 1,
+            "run_result": {
+                "output": "AT3\n1 3 5\nAT4\n8 64 216\nAT5\n8 192 1080\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "37": {
+            "status": 1,
+            "run_result": {
+                "output": "AT6\n1 2 3\nAT7\n4.189 33.51 113.1\nAT8\n4.189 67.02 339.3\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "38": {
+            "status": 1,
+            "run_result": {
+                "output": "AT9\nUnesite broj predmeta: Unesite vrstu 1. predmeta (L ili C): Unesite gustinu i radijus lopte: Unesite vrstu 2. predmeta (L ili C): Unesite gustinu i radijus lopte: Unesite vrstu 3. predmeta (L ili C): Unesite gustinu i dimenzije cigle (duzina, sirina, visina): 175\n67.0206\n4.18879\n\nAT10\nUnesite broj predmeta: Unesite vrstu 1. predmeta (L ili C): Unesite gustinu i dimenzije cigle (duzina, sirina, visina): Unesite vrstu 2. predmeta (L ili C): Unesite gustinu i dimenzije cigle (duzina, sirina, visina): Unesite vrstu 3. predmeta (L ili C): Unesite gustinu i radijus lopte: Unesite vrstu 4. predmeta (L ili C): Unesite gustinu i radijus lopte: 4523.89\n2094.4\n192\n8\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1593424062
+}

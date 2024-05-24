@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+.runme
+.output
+.at_status
+.zadaca

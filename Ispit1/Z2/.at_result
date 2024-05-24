@@ -1,0 +1,111 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘double Elementi(CjelobrojniTip)’:\nmain.cpp:11:1: warning: no return statement in function returning non-void [-Wreturn-type]\n }\n ^\nmain.cpp: In function ‘bool JeLiCjelobrojan(double)’:\nmain.cpp:28:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return int(broj)==broj;\n                       ^~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "11",
+                "col": "1",
+                "message": "no return statement in function returning non-void",
+                "output": "/tmp/buildservice/bs_2278/main.cpp:11:1: warning: no return statement in function returning non-void [-Wreturn-type] } ^",
+                "code": "}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "28",
+                "col": "23",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2278/main.cpp:28:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return int(broj)==broj;                       ^~~~",
+                "code": "return int(broj)==broj;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "33": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata vektora: Unesite elemente vektora: Rezultujuci dek: 4 8 100 6 225 2.65 64 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "34": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata vektora: Unesite elemente vektora: Problem: Element vektora negativan!\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "35": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "36": {
+            "status": 1,
+            "run_result": {
+                "output": "Element vektora negativan!\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "37": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1587633153
+}

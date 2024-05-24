@@ -1,0 +1,97 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘typename std::remove_reference<decltype (* It1)>::type* Izdvajanje(IterTipCjlb, IterTipCjlb&, int&)’:\nmain.cpp:105:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if(pomocna != -1 || ista) {\n                            ^\nmain.cpp: In instantiation of ‘typename std::remove_reference<decltype (* It1)>::type* Izdvajanje(IterTipCjlb, IterTipCjlb&, int&) [with IterTipCjlb = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; typename std::remove_reference<decltype (* It1)>::type = int]’:\nmain.cpp:174:72:   required from here\nmain.cpp:105:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if(pomocna != -1 || ista) {\n                ~~~~~~~~^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "105",
+                "col": "28",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_6006/main.cpp:105:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if(pomocna != -1 || ista) {                            ^/tmp/buildservice/bs_6006/main.cpp: In instantiation of ‘typename std::remove_reference<decltype (* It1)>::type* Izdvajanje(IterTipCjlb, IterTipCjlb&, int&) [with IterTipCjlb = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; typename std::remove_reference<decltype (* It1)>::type = int]’:/tmp/buildservice/bs_6006/main.cpp:174:72:   required from here",
+                "code": "if(pomocna != -1 || ista) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "105",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_6006/main.cpp:105:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if(pomocna != -1 || ista) {                ~~~~~~~~^~~~~",
+                "code": "if(pomocna != -1 || ista) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "14": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve: Izdvojeni brojevi: 15, 231, 42, 91, 213, 7\nModificirani kontejner (prije sortiranja): 363, 42, 91, 213\nModificirani kontejner (nakon sortiranja): 213, 42, 91, 363",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "15": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve: Izdvojeni brojevi: 15, 2, 3\nModificirani kontejner (prije sortiranja): 25, 15\nModificirani kontejner (nakon sortiranja): 15, 25",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "16": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve: Izdvojeni brojevi: 15, -231, -15, 42, 231, 91, 213, 7\nModificirani kontejner (prije sortiranja): 363, 42, 91, 213\nModificirani kontejner (nakon sortiranja): 213, 42, 91, 363",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "17": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve: Izdvojeni brojevi: 5, 10, 15, 30, -30, -15, -10, -5\nModificirani kontejner (prije sortiranja): \nModificirani kontejner (nakon sortiranja): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1587317235
+}

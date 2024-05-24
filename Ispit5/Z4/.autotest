@@ -1,0 +1,59 @@
+{
+    "id": 5742,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 5, Zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    \/\/include deque & vector\n    std::cout << \"AT1 - testiranje parametara funkcije\" << std::endl;\n    std::deque<int> d{3, 5, 2, 8, 6, 3};\n    std::vector<float> v{3, 5, 2, 8, 6, 3};\n    ZbirKontejnera(d, v);\n    ZbirKontejnera(v, d);\n    std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    \/\/include deque & vector\n    std::cout << \"AT2 - testiranje povratne vrijednosti funkcije\" << std::endl;\n    std::deque<int> d1{3, 5, 2, 8, 6, 3};\n    std::deque<double> d2{3, 5, 2, 8, 6, 3};\n    std::vector<double> v = ZbirKontejnera(d1, d2);\n    std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    \/\/include deque & vector\n    std::cout << \"AT3 - testiranje funkcije sa kontejnerima ciji su elementi istog tipa\" << std::endl;\n    std::deque<int> d1{3, 5, 2, 8, 6, 3}, d2{3, 5, 6, 8, 9, 12};\n    std::vector<int> v = ZbirKontejnera(d1, d2);\n    \n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n  }\n  \n  {\n    \/\/include deque & vector\n    std::cout << \"AT4 - testiranje funkcije sa kontejnerima ciji su elementi istog tipa, razlicit broj elemenata\" << std::endl;\n    std::deque<int> d1{3, 5, 2}, d2{3, 5, 6, 8, 9, 12};\n    \n    std::vector<int> v = ZbirKontejnera(d1, d2);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n    v = ZbirKontejnera(d2, d1);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n  }\n  \n  {\n    \/\/include deque & vector\n    std::cout << \"AT5 - testiranje funkcije sa praznim kontejnerima istog tipa\" << std::endl;\n    std::deque<int> d1{}, d2{};\n    \n    std::vector<int> v = ZbirKontejnera(d1, d2);\n    std::cout << v.size() << std::endl;\n  }",
+            "global_above_main": "#include <vector>\n#include <deque>\n#include <string>\n#include <list>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT1 - testiranje parametara funkcije\\nOK\\nAT2 - testiranje povratne vrijednosti funkcije\\nOK\\nAT3 - testiranje funkcije sa kontejnerima ciji su elementi istog tipa\\n6 10 8 16 15 15 \\nAT4 - testiranje funkcije sa kontejnerima ciji su elementi istog tipa, razlicit broj elemenata\\n6 10 8 8 9 12 \\n6 10 8 8 9 12 \\nAT5 - testiranje funkcije sa praznim kontejnerima istog tipa\\n0\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": " \n  {\n    \/\/include deque & vector\n    std::cout << \"AT6 - testiranje funkcije sa praznim kontejnerima razlicitog tipa\" << std::endl;\n    std::deque<double> d1{};\n    std::vector<int> d2{};\n    auto v = ZbirKontejnera(d1, d2);\n    std::cout << v.size() << std::endl;\n  }\n  \n  {\n    \/\/include list & vector\n    std::cout << \"AT7 - testiranje funkcije sa kontejnerima ciji su elementi razlicitog tipa tipa, razlicit broj elemenata\" << std::endl;\n    std::list<int> d1{3, 5, 2};\n    std::list<double> d2{3.5, 5.1, 6.2, 8.7, 9.8, 12.1};\n    \n    std::vector<double> v = ZbirKontejnera(d1, d2);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n    v = ZbirKontejnera(d2, d1);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n  }\n  \n  {\n    \/\/include list & deque & vector & string\n    std::cout << \"AT8 - testiranje funkcije sa kontejnerima ciji su elementi stringovi\" << std::endl;\n    std::list<std::string> d1{\"Danas je \", \"Ana voli \", \"Sir ima \"};\n    std::deque<std::string> d2{\"lijep dan.\", \"Milovana.\", \"miris.\"};\n    \n    std::vector<std::string> v = ZbirKontejnera(d1, d2);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n  }\n  \n  {\n    \/\/include list & deque & vector & string\n    std::cout << \"AT8 - testiranje funkcije sa kontejnerima ciji su elementi stringovi\" << std::endl;\n    std::list<std::string> d1{\"Danas je \", \"Ana voli \", \"Milovana\"};\n    std::deque<std::string> d2{\"lijep dan.\"};\n    \n    std::vector<std::string> v = ZbirKontejnera(d1, d2);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n  }\n  \n  {\n    \/\/include list & vector & string\n    std::cout << \"AT9 - testiranje funkcije sa kontejnerima ciji su elementi stringovi\" << std::endl;\n    std::list<std::string> d1{}, d2{};\n    std::cout << ZbirKontejnera(d1, d2).size() << std::endl;\n  }\n  \n  {\n    \/\/include list & vector\n    std::cout << \"AT10 - testiranje funkcije sa kontejnerima ciji su elementi realni brojevi razlicitog tipa\" << std::endl;\n    std::list<double> d1{1.23, 3.45, -6.7, 8.91, -1.3};\n    std::list<float> d2{-3.4, 2.45, 7.54, -12, 9.21};\n    std::vector<double> v = ZbirKontejnera(d1, d2);\n    for(auto x : v) \n      std::cout << x << \" \";\n    std::cout << std::endl;\n  }",
+            "global_above_main": "#include <vector>\n#include <deque>\n#include <string>\n#include <list>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT6 - testiranje funkcije sa praznim kontejnerima razlicitog tipa\\n0\\nAT7 - testiranje funkcije sa kontejnerima ciji su elementi razlicitog tipa tipa, razlicit broj elemenata\\n6.5 10.1 8.2 8.7 9.8 12.1 \\n6.5 10.1 8.2 8.7 9.8 12.1 \\nAT8 - testiranje funkcije sa kontejnerima ciji su elementi stringovi\\nDanas je lijep dan. Ana voli Milovana. Sir ima miris. \\nAT8 - testiranje funkcije sa kontejnerima ciji su elementi stringovi\\nDanas je lijep dan. Ana voli  Milovana\\nAT9 - testiranje funkcije sa kontejnerima ciji su elementi stringovi\\n0\\nAT10 - testiranje funkcije sa kontejnerima ciji su elementi realni brojevi razlicitog tipa\\n-2.17 5.9 0.84 -3.09 7.91\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "id": 5692,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 1, Zadatak 5",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Na vrh brda vrba mrda\nI jogurt ujutru goji\nKo rano rani, ostaje pospan\nI corava koka gvozdena vrata otvara\nTrt mrt zivot ili smrt\n8\n"
+            },
+            "expected": [
+                "Unesite 5 recenica: Unesite dozvoljeni broj samoglasnika: Preostale recenice:\\nNa vrh brda vrba mrda\\nI jogurt ujutru goji\\nTrt mrt zivot ili smrt",
+                "Na vrh brda vrba mrda\\nI jogurt ujutru goji\\nTrt mrt zivot ili smrt"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2\n\n_main();\nstd::cout << std::endl << \"OK\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Na vrh brda vrba mrda\nI jogurt ujutru goji\nKo rano rani, ostaje pospan\nI corava koka gvozdena vrata otvara\nTrt mrt zivot ili smrt\n3"
+            },
+            "expected": [
+                "Unesite 5 recenica: Unesite dozvoljeni broj samoglasnika: Preostale recenice:\\nOK\\n",
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Na vrh brda vrba mrda\nI jogurt ujutru goji\nKo rano rani, ostaje pospan\nI corava koka gvozdena vrata otvara\nTrt mrt zivot ili smrt\n4"
+            },
+            "expected": [
+                "Unesite 5 recenica: Unesite dozvoljeni broj samoglasnika: Preostale recenice:\\nNa vrh brda vrba mrda\\nTrt mrt zivot ili smrt\\n",
+                "Na vrh brda vrba mrda\\nTrt mrt zivot ili smrt\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4\n\n_main();\nstd::cout << std::endl << \"OK\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Na vrh brda vrba mrda\nI jogurt ujutru goji\nKo rano rani, ostaje pospan\nI corava koka gvozdena vrata otvara\nTrt mrt zivot ili smrt\n1"
+            },
+            "expected": [
+                "Unesite 5 recenica: Unesite dozvoljeni broj samoglasnika: Preostale recenice:\\nOK\\n",
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}
